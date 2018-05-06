@@ -10,18 +10,18 @@ class Nav extends React.Component {
 		return(
 			<nav>
 				<ul>
-					<a href=''>
+					<a href='#about'>
 						<li>About</li>
 					</a>
-					<a href=''>
+					<a href='#project'>
 						<li>Projects</li>
 					</a>
 				</ul>
 				<ul>
-					<a href=''>
+					<a href='#skill'>
 						<li>Skills</li>
 					</a>
-					<a href=''>
+					<a href='#contact'>
 						<li>Contact</li>
 					</a>
 				</ul>
