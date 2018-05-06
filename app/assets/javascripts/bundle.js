@@ -26971,11 +26971,11 @@ var Nav = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						'a',
-						{ href: '#project' },
+						{ href: '#skill' },
 						_react2.default.createElement(
 							'li',
 							null,
-							'Projects'
+							'Skills'
 						)
 					)
 				),
@@ -26984,11 +26984,11 @@ var Nav = function (_React$Component) {
 					null,
 					_react2.default.createElement(
 						'a',
-						{ href: '#skill' },
+						{ href: '#project' },
 						_react2.default.createElement(
 							'li',
 							null,
-							'Skills'
+							'Projects'
 						)
 					),
 					_react2.default.createElement(
@@ -27130,7 +27130,23 @@ var About = function (_React$Component) {
 	_createClass(About, [{
 		key: 'render',
 		value: function render() {
-			return _react2.default.createElement('div', null);
+			return _react2.default.createElement(
+				'div',
+				{ id: 'about' },
+				_react2.default.createElement(
+					'div',
+					{ className: 'about-cover-photo' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'about-content' },
+						_react2.default.createElement(
+							'h1',
+							null,
+							'ABOUT ME'
+						)
+					)
+				)
+			);
 		}
 	}]);
 
@@ -27138,6 +27154,8 @@ var About = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = About;
+
+// <img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1525644432/249358_4588511106521_218840310_n_hlkybj.jpg' />
 
 /***/ }),
 /* 119 */
@@ -27176,7 +27194,7 @@ var Skill = function (_React$Component) {
 	_createClass(Skill, [{
 		key: 'render',
 		value: function render() {
-			return _react2.default.createElement('div', null);
+			return _react2.default.createElement('div', { id: 'skill' });
 		}
 	}]);
 
@@ -27222,7 +27240,7 @@ var Project = function (_React$Component) {
 	_createClass(Project, [{
 		key: 'render',
 		value: function render() {
-			return _react2.default.createElement('div', null);
+			return _react2.default.createElement('div', { id: 'project' });
 		}
 	}]);
 
@@ -27271,7 +27289,7 @@ var Contact = function (_React$Component) {
 	_createClass(Contact, [{
 		key: 'render',
 		value: function render() {
-			return _react2.default.createElement('div', null);
+			return _react2.default.createElement('div', { id: 'contact' });
 		}
 	}]);
 

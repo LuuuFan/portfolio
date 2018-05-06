@@ -10,7 +10,7 @@ class Contact extends React.Component{
 
 	render(){
 		return(
-			<div>
+			<div id='contact'>
 			</div>
 		);
 	}

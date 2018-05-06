@@ -7,7 +7,7 @@ class Skill extends React.Component{
 
 	render(){
 		return(
-			<div>
+			<div id='skill'>
 			</div>
 		);
 	}

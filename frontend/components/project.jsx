@@ -7,7 +7,7 @@ class Project extends React.Component{
 
 	render(){
 		return(
-			<div>
+			<div id='project'>
 			</div>
 		);
 	}

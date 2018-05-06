@@ -90,6 +90,23 @@ nav {
   nav li:hover {
     text-decoration: underline; }
 
+.about-cover-photo {
+  position: realative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden; }
+  .about-cover-photo img {
+    width: 100%;
+    object-fit: cover; }
+
+.about-content {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  text-align: center;
+  margin: auto; }
+
 .avatar {
   position: fixed;
   top: 20px;
@@ -133,7 +150,9 @@ nav {
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      color: transparent; }
+      color: transparent;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s; }
   .footer p {
     margin-top: 30px; }
 
