@@ -3,3 +3,88 @@
 @import url("https://use.fontawesome.com/releases/v5.0.9/css/all.css");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
+nav {
+	position: fixed;
+	height: 75px;
+	top: 0;
+	padding: 15px;
+	width: 100%;
+	background: linear-gradient(#bdc3c7, #bdc3c7);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	ul{
+		display: flex;
+		align-items: center;
+		width: 40%;
+		justify-content: space-around;	
+		text-transform: uppercase;
+		font-weight: 800;
+		font-size: 18px;	
+	}
+	li{
+		cursor: pointer;
+	}
+	li:hover{
+		text-decoration: underline;
+	}
+}
+
+.avatar {
+	position: fixed;
+	top: 20px;
+	left: 45%;
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+	img{
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.footer{
+	margin-top: 200px;
+	padding-top: 30px;
+	background: linear-gradient(#bdc3c7, #bdc3c7);
+	width: 100%;
+	height: 200px;
+	text-align: center;
+	div{
+		width: 50%;
+		margin: 30px auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		i{
+			font-size: 48px;
+		}
+		i:hover{
+			transition: all 0.5s;
+		}
+		.fa-linkedin:hover{
+			color: #0073b1;
+		}
+		.fa-weibo:hover{
+			color: #df2029;
+		}
+		.fa-github-square:hover{
+			color: white;
+		}
+		.fa-facebook-square:hover{
+			color: #4267b2;
+		}
+		.fa-instagram:hover{
+			background-image: -webkit-linear-gradient(to right, #fa709a 0%, #fee140 100%);
+			background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+  				-webkit-text-fill-color: transparent;
+			color: transparent;
+		}
+	}
+	p{
+		margin-top: 30px;
+	}	
+}

@@ -67,4 +67,74 @@ input[type="submit"] {
   display: block;
   clear: both; }
 
+nav {
+  position: fixed;
+  height: 75px;
+  top: 0;
+  padding: 15px;
+  width: 100%;
+  background: linear-gradient(#bdc3c7, #bdc3c7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  nav ul {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 18px; }
+  nav li {
+    cursor: pointer; }
+  nav li:hover {
+    text-decoration: underline; }
+
+.avatar {
+  position: fixed;
+  top: 20px;
+  left: 45%;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  overflow: hidden; }
+  .avatar img {
+    height: 100%;
+    object-fit: cover; }
+
+.footer {
+  margin-top: 200px;
+  padding-top: 30px;
+  background: linear-gradient(#bdc3c7, #bdc3c7);
+  width: 100%;
+  height: 200px;
+  text-align: center; }
+  .footer div {
+    width: 50%;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+    .footer div i {
+      font-size: 48px; }
+    .footer div i:hover {
+      transition: all 0.5s; }
+    .footer div .fa-linkedin:hover {
+      color: #0073b1; }
+    .footer div .fa-weibo:hover {
+      color: #df2029; }
+    .footer div .fa-github-square:hover {
+      color: white; }
+    .footer div .fa-facebook-square:hover {
+      color: #4267b2; }
+    .footer div .fa-instagram:hover {
+      background-image: -webkit-linear-gradient(to right, #fa709a 0%, #fee140 100%);
+      background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent; }
+  .footer p {
+    margin-top: 30px; }
+
 /*# sourceMappingURL=style.css.map */
