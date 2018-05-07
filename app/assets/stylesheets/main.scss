@@ -199,16 +199,22 @@ h1{
 }
 
 .project-description, .project-screenshoot{
-	flex: 1;
-	height: 100%;
+	width: 50%;
 }
 
 .project-description{
-	padding: 7rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 	h2{
 		font-weight: 800;
 		font-size: 24px;
 		margin-bottom: 30px;
+	}
+	p{
+		margin: 0 30px;
 	}
 	a:hover{
 		text-decoration: underline;
@@ -216,15 +222,28 @@ h1{
 }
 
 .project-screenshoot{
-	height: 365;
+	position: relative;
+	height: 400px;
 	overflow: hidden;
 	img{
-		width: 100%;
+		height: 100%;
 		object-fit: cover;
 	}
 }
 
-.order-1{
+.project-cover{
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	background: linear-gradient( rgba(20,20,20, .5), rgba(20,20,20, .5));	
+	top: 0;
+	left: 0;
+	padding-top: 176px;
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px #000000;
+
 }
 
 .order-2{

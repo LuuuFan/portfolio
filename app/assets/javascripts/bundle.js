@@ -27512,12 +27512,29 @@ var Project = function (_React$Component) {
 	function Project() {
 		_classCallCheck(this, Project);
 
-		return _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).call(this));
+		var _this = _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).call(this));
+
+		_this.state = {
+			hidden: ''
+		};
+		return _this;
 	}
 
 	_createClass(Project, [{
+		key: 'revealCover',
+		value: function revealCover(target) {
+			this.setState({ hidden: target });
+		}
+	}, {
+		key: 'hideCover',
+		value: function hideCover() {
+			this.setState({ hidden: '' });
+		}
+	}, {
 		key: 'render',
 		value: function render() {
+			var _this2 = this;
+
 			return _react2.default.createElement(
 				'div',
 				{ id: 'project' },
@@ -27538,7 +27555,11 @@ var Project = function (_React$Component) {
 							_react2.default.createElement(
 								'h2',
 								null,
-								'Celp'
+								_react2.default.createElement(
+									'a',
+									{ href: 'https://celp.herokuapp.com/#/', target: '_blank' },
+									'Celp'
+								)
 							),
 							_react2.default.createElement(
 								'p',
@@ -27548,8 +27569,21 @@ var Project = function (_React$Component) {
 						),
 						_react2.default.createElement(
 							'div',
-							{ className: 'project-screenshoot' },
-							_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525672532/Screenshot_from_2018-05-06_22-55-08_xdp1qj.png' })
+							{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
+									return _this2.revealCover('celp');
+								}, onMouseOut: function onMouseOut() {
+									return _this2.hideCover();
+								} },
+							_react2.default.createElement(
+								'a',
+								{ href: 'https://celp.herokuapp.com/#/', target: '_blank' },
+								_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525672532/Screenshot_from_2018-05-06_22-55-08_xdp1qj.png' }),
+								_react2.default.createElement(
+									'div',
+									{ className: 'project-cover ' + (this.state.hidden === 'celp' ? '' : 'hidden') },
+									'CELP'
+								)
+							)
 						)
 					),
 					_react2.default.createElement(
@@ -27561,18 +27595,35 @@ var Project = function (_React$Component) {
 							_react2.default.createElement(
 								'h2',
 								null,
-								'Homeco'
+								_react2.default.createElement(
+									'a',
+									{ href: 'https://homeco.herokuapp.com/#/', target: '_blank' },
+									'Homeco'
+								)
 							),
 							_react2.default.createElement(
 								'p',
 								null,
-								'descriptionAn All-in-one Home Service and Schedule management Project structured by MERN Stack'
+								'An All-in-one Home Service and Schedule management Project structured by MERN Stack'
 							)
 						),
 						_react2.default.createElement(
 							'div',
-							{ className: 'project-screenshoot' },
-							_react2.default.createElement('img', { src: 'http://res.cloudinary.com/ddwejrtgh/image/upload/v1525672533/Screenshot_from_2018-05-06_22-54-48_gqbzfh.png' })
+							{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
+									return _this2.revealCover('homeco');
+								}, onMouseOut: function onMouseOut() {
+									return _this2.hideCover();
+								} },
+							_react2.default.createElement(
+								'a',
+								{ href: 'https://homeco.herokuapp.com/#/', target: '_blank' },
+								_react2.default.createElement('img', { src: 'http://res.cloudinary.com/ddwejrtgh/image/upload/v1525672533/Screenshot_from_2018-05-06_22-54-48_gqbzfh.png' }),
+								_react2.default.createElement(
+									'div',
+									{ className: 'project-cover ' + (this.state.hidden === 'homeco' ? '' : 'hidden') },
+									'HOMECO'
+								)
+							)
 						)
 					),
 					_react2.default.createElement(
@@ -27584,7 +27635,11 @@ var Project = function (_React$Component) {
 							_react2.default.createElement(
 								'h2',
 								null,
-								'Pendo'
+								_react2.default.createElement(
+									'a',
+									{ href: 'https://hyouuu.github.io/PendoWeb/#/', target: '_blank' },
+									'Pendo'
+								)
 							),
 							_react2.default.createElement(
 								'p',
@@ -27600,8 +27655,21 @@ var Project = function (_React$Component) {
 						),
 						_react2.default.createElement(
 							'div',
-							{ className: 'project-screenshoot' },
-							_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525672680/Screenshot_from_2018-05-06_22-57-33_sntjd8.png' })
+							{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
+									return _this2.revealCover('pendo');
+								}, onMouseOut: function onMouseOut() {
+									return _this2.hideCover();
+								} },
+							_react2.default.createElement(
+								'a',
+								{ href: 'https://hyouuu.github.io/PendoWeb/#/', target: '_blank' },
+								_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525672680/Screenshot_from_2018-05-06_22-57-33_sntjd8.png' }),
+								_react2.default.createElement(
+									'div',
+									{ className: 'project-cover ' + (this.state.hidden === 'pendo' ? '' : 'hidden') },
+									'PENDO'
+								)
+							)
 						)
 					),
 					_react2.default.createElement(
@@ -27613,7 +27681,11 @@ var Project = function (_React$Component) {
 							_react2.default.createElement(
 								'h2',
 								null,
-								'Petta'
+								_react2.default.createElement(
+									'a',
+									{ href: 'https://luuufan.github.io/petta/', target: '_blank' },
+									'Petta'
+								)
 							),
 							_react2.default.createElement(
 								'p',
@@ -27623,8 +27695,21 @@ var Project = function (_React$Component) {
 						),
 						_react2.default.createElement(
 							'div',
-							{ className: 'project-screenshoot' },
-							_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525672702/Screenshot_from_2018-05-06_22-58-09_s8hot0.png' })
+							{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
+									return _this2.revealCover('petta');
+								}, onMouseOut: function onMouseOut() {
+									return _this2.hideCover();
+								} },
+							_react2.default.createElement(
+								'a',
+								{ href: 'https://luuufan.github.io/petta/', target: '_blank' },
+								_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525672702/Screenshot_from_2018-05-06_22-58-09_s8hot0.png' }),
+								_react2.default.createElement(
+									'div',
+									{ className: 'project-cover ' + (this.state.hidden === 'petta' ? '' : 'hidden') },
+									'PETTA'
+								)
+							)
 						)
 					)
 				)
