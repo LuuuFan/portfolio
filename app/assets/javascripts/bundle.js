@@ -26952,7 +26952,7 @@ var Nav = function (_React$Component) {
 		key: 'select',
 		value: function select(type) {
 			if (type === this.state.selected) {
-				thie.setState({
+				this.setState({
 					selected: ''
 				});
 			} else {
@@ -26960,6 +26960,14 @@ var Nav = function (_React$Component) {
 					selected: type
 				});
 			}
+		}
+	}, {
+		key: 'scroll',
+		value: function scroll(e, target) {
+			e.preventDefault();
+			$('html, body').animate({
+				scrollTop: $(target).offset().top
+			}, 800);
 		}
 	}, {
 		key: 'render',
@@ -26974,7 +26982,9 @@ var Nav = function (_React$Component) {
 					null,
 					_react2.default.createElement(
 						'a',
-						{ href: '#about' },
+						{ href: '#about', onClick: function onClick(e) {
+								return _this2.scroll(e, '#about');
+							} },
 						_react2.default.createElement(
 							'li',
 							{ className: this.state.selected === 'about' ? 'selected' : '', onClick: function onClick() {
@@ -26985,7 +26995,9 @@ var Nav = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						'a',
-						{ href: '#skill' },
+						{ href: '#skill', onClick: function onClick(e) {
+								return _this2.scroll(e, '#skill');
+							} },
 						_react2.default.createElement(
 							'li',
 							{ className: this.state.selected === 'skill' ? 'selected' : '', onClick: function onClick() {
@@ -27000,18 +27012,22 @@ var Nav = function (_React$Component) {
 					null,
 					_react2.default.createElement(
 						'a',
-						{ href: '#project' },
+						{ href: '#project', onClick: function onClick(e) {
+								return _this2.scroll(e, '#project');
+							} },
 						_react2.default.createElement(
 							'li',
-							{ className: this.state.selected === 'project' ? 'selected' : '', onClick: function onClick() {
-									return _this2.select('project');
+							{ className: this.state.selected === 'portfolio' ? 'selected' : '', onClick: function onClick() {
+									return _this2.select('portfolio');
 								} },
-							'Projects'
+							'Portfolio'
 						)
 					),
 					_react2.default.createElement(
 						'a',
-						{ href: '#contact' },
+						{ href: '#contact', onClick: function onClick(e) {
+								return _this2.scroll(e, '#contact');
+							} },
 						_react2.default.createElement(
 							'li',
 							{ className: this.state.selected === 'contact' ? 'selected' : '', onClick: function onClick() {
@@ -27168,6 +27184,24 @@ var About = function (_React$Component) {
 							'h1',
 							null,
 							'ABOUT ME'
+						),
+						_react2.default.createElement(
+							'div',
+							null,
+							_react2.default.createElement(
+								'h2',
+								null,
+								'NOT ONLY A SOFTWARE ENGINEER'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							null,
+							_react2.default.createElement(
+								'h2',
+								null,
+								'BUT ALSO A ...'
+							)
 						)
 					)
 				)
@@ -27238,13 +27272,13 @@ var Skill = function (_React$Component) {
 
 			return _react2.default.createElement(
 				"div",
-				null,
+				{ id: "skill" },
 				_react2.default.createElement(
 					"div",
 					{ className: "skill-title" },
 					_react2.default.createElement(
 						"h1",
-						{ id: "skill" },
+						null,
 						"SKILLS"
 					)
 				),
@@ -27502,6 +27536,23 @@ var Skill = function (_React$Component) {
 								"Heroku"
 							)
 						)
+					),
+					_react2.default.createElement(
+						"i",
+						{ className: "devicon-ubuntu-plain colored", onMouseOver: function onMouseOver() {
+								return _this2.revealWordmark('ubuntu');
+							}, onMouseOut: function onMouseOut() {
+								return _this2.hiddenWordmark();
+							} },
+						_react2.default.createElement(
+							"a",
+							{ href: "https://www.ubuntu.com/", target: "_blank" },
+							_react2.default.createElement(
+								"div",
+								{ className: "icon-wordmark  " + (this.state.mouseOver === 'ubuntu' ? "" : "hidden") },
+								"Ubuntu"
+							)
+						)
 					)
 				)
 			);
@@ -27550,7 +27601,101 @@ var Project = function (_React$Component) {
 	_createClass(Project, [{
 		key: 'render',
 		value: function render() {
-			return _react2.default.createElement('div', { id: 'project' });
+			return _react2.default.createElement(
+				'div',
+				{ id: 'project' },
+				_react2.default.createElement(
+					'h1',
+					null,
+					'PORTFOLIO'
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'project-list order-1' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'single-project' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'project-description' },
+							_react2.default.createElement(
+								'h2',
+								null,
+								'Celp'
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'A Full Stack Web Application inspired by Yelp, developed in Ruby on Rails, React, etc.  '
+							)
+						),
+						_react2.default.createElement('div', { className: 'project-screenshoot' })
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'single-project order-1' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'project-description' },
+							_react2.default.createElement(
+								'h2',
+								null,
+								'Homeco'
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'descriptionAn All-in-one Home Service and Schedule management Project structured by MERN Stack'
+							)
+						),
+						_react2.default.createElement('div', { className: 'project-screenshoot' })
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'single-project order-2' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'project-description' },
+							_react2.default.createElement(
+								'h2',
+								null,
+								'Petta'
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'A Data Visualization project build with JavaScript, D3.JS and Webpack.  '
+							)
+						),
+						_react2.default.createElement('div', { className: 'project-screenshoot' })
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'single-project order-2' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'project-description' },
+							_react2.default.createElement(
+								'h2',
+								null,
+								'Pendo'
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'Web application for ',
+								_react2.default.createElement(
+									'a',
+									{ href: 'https://itunes.apple.com/us/app/pendo-note/id805451002?mt=8', target: '_blank' },
+									'Pendo Note iOS app'
+								),
+								', crispy notebook for any ideas'
+							)
+						),
+						_react2.default.createElement('div', { className: 'project-screenshoot' })
+					)
+				)
+			);
 		}
 	}]);
 
@@ -27599,7 +27744,15 @@ var Contact = function (_React$Component) {
 	_createClass(Contact, [{
 		key: 'render',
 		value: function render() {
-			return _react2.default.createElement('div', { id: 'contact' });
+			return _react2.default.createElement(
+				'div',
+				{ id: 'contact' },
+				_react2.default.createElement(
+					'h1',
+					null,
+					'CONTACT'
+				)
+			);
 		}
 	}]);
 

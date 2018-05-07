@@ -7,6 +7,13 @@ class About extends React.Component{
 				<div className='about-cover-photo'>
 					<div className='about-content'>
 						<h1>ABOUT ME</h1>
+						<div>
+							<h2>NOT ONLY A SOFTWARE ENGINEER</h2>
+						</div>
+
+						<div>
+							<h2>BUT ALSO A ...</h2>
+						</div>
 					</div>
 				</div>
 			</div>

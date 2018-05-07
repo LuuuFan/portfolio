@@ -10,9 +10,9 @@ class Nav extends React.Component {
 
 	select(type){
 		if (type === this.state.selected) {
-			thie.setState({
+			this.setState({
 				selected: ''
-			})
+			});
 		} else {
 			this.setState({
 				selected: type
@@ -20,22 +20,29 @@ class Nav extends React.Component {
 		}
 	}
 
+	scroll(e, target){
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: $(target).offset().top
+		}, 800);	
+	}
+
 	render(){
 		return(
 			<nav>
 				<ul>
-					<a href='#about'>
+					<a href='#about' onClick={(e)=>this.scroll(e, '#about')}>
 						<li className={this.state.selected==='about' ? 'selected' : ''} onClick={()=>this.select('about')}>About</li>
 					</a>
-					<a href='#skill'>
+					<a href='#skill' onClick={(e)=>this.scroll(e, '#skill')}>
 						<li className={this.state.selected==='skill' ? 'selected' : ''} onClick={()=>this.select('skill')}>Skills</li>
 					</a>
 				</ul>
 				<ul>
-					<a href='#project'>
-						<li className={this.state.selected==='project' ? 'selected' : ''} onClick={()=>this.select('project')}>Projects</li>
+					<a href='#project'  onClick={(e)=>this.scroll(e, '#project')}>
+						<li className={this.state.selected==='portfolio' ? 'selected' : ''} onClick={()=>this.select('portfolio')}>Portfolio</li>
 					</a>
-					<a href='#contact'>
+					<a href='#contact'  onClick={(e)=>this.scroll(e, '#contact')}>
 						<li className={this.state.selected==='contact' ? 'selected' : ''} onClick={()=>this.select('contact')}>Contact</li>
 					</a>
 				</ul>

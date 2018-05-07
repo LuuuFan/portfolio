@@ -18,8 +18,8 @@ class Skill extends React.Component{
 
 	render(){
 		return(
-			<div>
-				<div className='skill-title'><h1 id='skill'>SKILLS</h1></div>
+			<div id='skill'>
+				<div className='skill-title'><h1>SKILLS</h1></div>
 				<div className='group skills'>
 					<i className="devicon-ruby-plain colored"  onMouseOver={()=>this.revealWordmark('ruby')} onMouseOut={()=>this.hiddenWordmark()}>
 						<a href='https://www.ruby-lang.org/en/' target='_blank'>
@@ -94,6 +94,11 @@ class Skill extends React.Component{
 					<i className="devicon-heroku-plain colored" onMouseOver={()=>this.revealWordmark('heroku')} onMouseOut={()=>this.hiddenWordmark()}>
 						<a href='https://www.heroku.com/' target='_blank'>
 							<div className={`icon-wordmark  ${this.state.mouseOver==='heroku' ? "" : "hidden"}`}>Heroku</div>
+						</a>
+					</i>
+					<i className="devicon-ubuntu-plain colored"  onMouseOver={()=>this.revealWordmark('ubuntu')} onMouseOut={()=>this.hiddenWordmark()}>
+						<a href='https://www.ubuntu.com/' target='_blank'>
+							<div className={`icon-wordmark  ${this.state.mouseOver==='ubuntu' ? "" : "hidden"}`}>Ubuntu</div>
 						</a>
 					</i>
 				</div>

@@ -1,16 +1,17 @@
 @import './reset';
 
 @import url("https://use.fontawesome.com/releases/v5.0.9/css/all.css");
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+// @import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
 @import url('https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css');
 
 nav {
 	position: fixed;
+	padding-bottom: 3px;
 	margin-bottom: 75px;
 	z-index: 5;
 	height: 75px;
 	top: 0;
-	padding: 15px;
 	width: 100%;
 	background: linear-gradient(#bdc3c7, #bdc3c7);
 	display: flex;
@@ -19,25 +20,37 @@ nav {
 	ul{
 		display: flex;
 		align-items: center;
+		height: 100%;
 		width: 40%;
 		justify-content: space-around;	
 		text-transform: uppercase;
 		font-weight: 800;
 		font-size: 18px;	
 	}
+	a{
+		width: 50%;
+		height: 100%;
+	}
 	li{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		cursor: pointer;
+		border-bottom: 3px solid transparent;
+		text-shadow: 0.1px 0.1px 0.1px #000000;
 	}
 	li:hover{
-		text-decoration: underline;
+		border-bottom: 3px solid white;
 		transition: all 0.5s;
 	}
 }
 
 .selected{
+	border-bottom: 3px solid white;
 	color: white;
-	font-weight: 999;
-	text-decoration: underline;
+	font-weight: 900;
 	transition: all 0.5s;
 }
 
@@ -50,15 +63,17 @@ nav {
 	width: 150px;
 	border-radius: 50%;
 	overflow: hidden;
+    box-shadow: 0 5px 5px 0 #adb5bd;
 	img{
 		height: 100%;
 		object-fit: cover;
+		transition: height 1s width 1s;
 	}
 }
 
 h1{
 	font-size: 36px;
-	font-weight: 800;
+	font-weight: 999;
 	margin-bottom: 30px;
 }
 
@@ -88,8 +103,9 @@ h1{
 	margin: auto;
 }
 
-#skill{
-	margin-top: 250px;
+#skill, #project, #contact{
+	text-align: center;
+	padding-top: 250px;
 }
 
 .hidden{
@@ -102,8 +118,7 @@ h1{
 	i{
 		cursor: pointer;
 		position: relative;
-		margin-right: 10px;
-		margin-bottom: 10px;
+		margin: 15px;
 		float: left;
 		font-size: 148px;
 	}
@@ -122,7 +137,7 @@ h1{
 	}
 	i:hover{
 		opacity: 0.5;
-		background: linear-gradient( rgba(20,20,20, .5), rgba(20,20,20, .5));
+		// background: linear-gradient( rgba(20,20,20, .5), rgba(20,20,20, .5));
 		transition: all 0.5s;
 	}
 }
@@ -172,4 +187,50 @@ h1{
 	p{
 		margin-top: 30px;
 	}	
+}
+
+.project-list{
+	width: 60%;
+	margin: auto;
+}
+
+.single-project{
+	display: flex;
+}
+
+.project-description, .project-screenshoot{
+	flex: 1;
+	height: 100%;
+}
+
+.project-description{
+	padding: 7rem;
+	h2{
+		font-weight: 800;
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+	a{
+		color: 
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+}
+
+.project-screenshoot{
+	height: 200px;
+	overflow: hidden;
+	img{
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.order-1{
+	justify-content: flex-start;
+}
+
+.order-2{
+	justify-content: flex-end;
 }
