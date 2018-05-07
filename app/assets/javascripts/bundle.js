@@ -26848,23 +26848,23 @@ var _nav = __webpack_require__(116);
 
 var _nav2 = _interopRequireDefault(_nav);
 
-var _about = __webpack_require__(118);
+var _about = __webpack_require__(117);
 
 var _about2 = _interopRequireDefault(_about);
 
-var _skill = __webpack_require__(119);
+var _skill = __webpack_require__(118);
 
 var _skill2 = _interopRequireDefault(_skill);
 
-var _project = __webpack_require__(120);
+var _project = __webpack_require__(119);
 
 var _project2 = _interopRequireDefault(_project);
 
-var _contact = __webpack_require__(121);
+var _contact = __webpack_require__(120);
 
 var _contact2 = _interopRequireDefault(_contact);
 
-var _footer = __webpack_require__(117);
+var _footer = __webpack_require__(121);
 
 var _footer2 = _interopRequireDefault(_footer);
 
@@ -27076,89 +27076,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Footer = function (_React$Component) {
-	_inherits(Footer, _React$Component);
-
-	function Footer() {
-		_classCallCheck(this, Footer);
-
-		return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this));
-	}
-
-	_createClass(Footer, [{
-		key: 'render',
-		value: function render() {
-			return _react2.default.createElement(
-				'div',
-				{ className: 'footer' },
-				_react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement(
-						'a',
-						{ href: 'https://www.linkedin.com/in/lu-fan-a4a94812/', target: '_blank' },
-						_react2.default.createElement('i', { className: 'fab fa-linkedin' })
-					),
-					_react2.default.createElement(
-						'a',
-						{ href: 'https://github.com/LuuuFan', target: '_blank' },
-						_react2.default.createElement('i', { className: 'fab fa-github-square' })
-					),
-					_react2.default.createElement(
-						'a',
-						{ href: 'https://www.facebook.com/angelia.fan.3', target: '_blank' },
-						_react2.default.createElement('i', { className: 'fab fa-facebook-square' })
-					),
-					_react2.default.createElement(
-						'a',
-						{ href: 'https://www.instagram.com/sssbb19/', target: '_blank' },
-						_react2.default.createElement('i', { className: 'fab fa-instagram' })
-					),
-					_react2.default.createElement(
-						'a',
-						{ href: 'https://weibo.com/sssbb19', target: '_blank' },
-						_react2.default.createElement('i', { className: 'fab fa-weibo' })
-					)
-				),
-				_react2.default.createElement(
-					'p',
-					null,
-					'Copyright \xA9 Lu Fan'
-				)
-			);
-		}
-	}]);
-
-	return Footer;
-}(_react2.default.Component);
-
-exports.default = Footer;
-
-/***/ }),
-/* 118 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 var About = function (_React$Component) {
 	_inherits(About, _React$Component);
 
@@ -27217,7 +27134,7 @@ exports.default = About;
 // <img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1525644432/249358_4588511106521_218840310_n_hlkybj.jpg' />
 
 /***/ }),
-/* 119 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27565,7 +27482,7 @@ var Skill = function (_React$Component) {
 exports.default = Skill;
 
 /***/ }),
-/* 120 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27629,11 +27546,15 @@ var Project = function (_React$Component) {
 								'A Full Stack Web Application inspired by Yelp, developed in Ruby on Rails, React, etc.  '
 							)
 						),
-						_react2.default.createElement('div', { className: 'project-screenshoot' })
+						_react2.default.createElement(
+							'div',
+							{ className: 'project-screenshoot' },
+							_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525672532/Screenshot_from_2018-05-06_22-55-08_xdp1qj.png' })
+						)
 					),
 					_react2.default.createElement(
 						'div',
-						{ className: 'single-project order-1' },
+						{ className: 'single-project order-2' },
 						_react2.default.createElement(
 							'div',
 							{ className: 'project-description' },
@@ -27648,30 +27569,15 @@ var Project = function (_React$Component) {
 								'descriptionAn All-in-one Home Service and Schedule management Project structured by MERN Stack'
 							)
 						),
-						_react2.default.createElement('div', { className: 'project-screenshoot' })
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'single-project order-2' },
 						_react2.default.createElement(
 							'div',
-							{ className: 'project-description' },
-							_react2.default.createElement(
-								'h2',
-								null,
-								'Petta'
-							),
-							_react2.default.createElement(
-								'p',
-								null,
-								'A Data Visualization project build with JavaScript, D3.JS and Webpack.  '
-							)
-						),
-						_react2.default.createElement('div', { className: 'project-screenshoot' })
+							{ className: 'project-screenshoot' },
+							_react2.default.createElement('img', { src: 'http://res.cloudinary.com/ddwejrtgh/image/upload/v1525672533/Screenshot_from_2018-05-06_22-54-48_gqbzfh.png' })
+						)
 					),
 					_react2.default.createElement(
 						'div',
-						{ className: 'single-project order-2' },
+						{ className: 'single-project order-1' },
 						_react2.default.createElement(
 							'div',
 							{ className: 'project-description' },
@@ -27692,7 +27598,34 @@ var Project = function (_React$Component) {
 								', crispy notebook for any ideas'
 							)
 						),
-						_react2.default.createElement('div', { className: 'project-screenshoot' })
+						_react2.default.createElement(
+							'div',
+							{ className: 'project-screenshoot' },
+							_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525672680/Screenshot_from_2018-05-06_22-57-33_sntjd8.png' })
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'single-project order-2' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'project-description' },
+							_react2.default.createElement(
+								'h2',
+								null,
+								'Petta'
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'A Data Visualization project build with JavaScript, D3.JS and Webpack.  '
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'project-screenshoot' },
+							_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525672702/Screenshot_from_2018-05-06_22-58-09_s8hot0.png' })
+						)
 					)
 				)
 			);
@@ -27705,7 +27638,7 @@ var Project = function (_React$Component) {
 exports.default = Project;
 
 /***/ }),
-/* 121 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27760,6 +27693,89 @@ var Contact = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Contact;
+
+/***/ }),
+/* 121 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Footer = function (_React$Component) {
+	_inherits(Footer, _React$Component);
+
+	function Footer() {
+		_classCallCheck(this, Footer);
+
+		return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this));
+	}
+
+	_createClass(Footer, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: 'footer' },
+				_react2.default.createElement(
+					'div',
+					null,
+					_react2.default.createElement(
+						'a',
+						{ href: 'https://www.linkedin.com/in/lu-fan-a4a94812/', target: '_blank' },
+						_react2.default.createElement('i', { className: 'fab fa-linkedin' })
+					),
+					_react2.default.createElement(
+						'a',
+						{ href: 'https://github.com/LuuuFan', target: '_blank' },
+						_react2.default.createElement('i', { className: 'fab fa-github-square' })
+					),
+					_react2.default.createElement(
+						'a',
+						{ href: 'https://www.facebook.com/angelia.fan.3', target: '_blank' },
+						_react2.default.createElement('i', { className: 'fab fa-facebook-square' })
+					),
+					_react2.default.createElement(
+						'a',
+						{ href: 'https://www.instagram.com/sssbb19/', target: '_blank' },
+						_react2.default.createElement('i', { className: 'fab fa-instagram' })
+					),
+					_react2.default.createElement(
+						'a',
+						{ href: 'https://weibo.com/sssbb19', target: '_blank' },
+						_react2.default.createElement('i', { className: 'fab fa-weibo' })
+					)
+				),
+				_react2.default.createElement(
+					'p',
+					null,
+					'Copyright \xA9 Lu Fan'
+				)
+			);
+		}
+	}]);
+
+	return Footer;
+}(_react2.default.Component);
+
+exports.default = Footer;
 
 /***/ })
 /******/ ]);

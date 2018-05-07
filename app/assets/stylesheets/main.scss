@@ -210,16 +210,13 @@ h1{
 		font-size: 24px;
 		margin-bottom: 30px;
 	}
-	a{
-		color: 
-	}
 	a:hover{
 		text-decoration: underline;
 	}
 }
 
 .project-screenshoot{
-	height: 200px;
+	height: 365;
 	overflow: hidden;
 	img{
 		width: 100%;
@@ -228,9 +225,8 @@ h1{
 }
 
 .order-1{
-	justify-content: flex-start;
 }
 
 .order-2{
-	justify-content: flex-end;
+	flex-direction: row-reverse;
 }
