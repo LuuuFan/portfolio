@@ -26820,7 +26820,7 @@ var App = function App() {
     _react2.default.createElement(
       _reactRouterDom.Switch,
       null,
-      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _home2.default })
+      _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _home2.default })
     )
   );
 };
@@ -26895,11 +26895,6 @@ var Home = function (_React$Component) {
 				'div',
 				null,
 				_react2.default.createElement(_nav2.default, null),
-				_react2.default.createElement(
-					'div',
-					{ className: 'avatar' },
-					_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525637838/323463_2651367759148_317015209_o_czpd5y.jpg' })
-				),
 				_react2.default.createElement(_about2.default, null),
 				_react2.default.createElement(_skill2.default, null),
 				_react2.default.createElement(_project2.default, null),
@@ -26947,13 +26942,30 @@ var Nav = function (_React$Component) {
 
 		var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this));
 
-		_this.state = {};
+		_this.state = {
+			selected: ''
+		};
 		return _this;
 	}
 
 	_createClass(Nav, [{
+		key: 'select',
+		value: function select(type) {
+			if (type === this.state.selected) {
+				thie.setState({
+					selected: ''
+				});
+			} else {
+				this.setState({
+					selected: type
+				});
+			}
+		}
+	}, {
 		key: 'render',
 		value: function render() {
+			var _this2 = this;
+
 			return _react2.default.createElement(
 				'nav',
 				null,
@@ -26965,7 +26977,9 @@ var Nav = function (_React$Component) {
 						{ href: '#about' },
 						_react2.default.createElement(
 							'li',
-							null,
+							{ className: this.state.selected === 'about' ? 'selected' : '', onClick: function onClick() {
+									return _this2.select('about');
+								} },
 							'About'
 						)
 					),
@@ -26974,7 +26988,9 @@ var Nav = function (_React$Component) {
 						{ href: '#skill' },
 						_react2.default.createElement(
 							'li',
-							null,
+							{ className: this.state.selected === 'skill' ? 'selected' : '', onClick: function onClick() {
+									return _this2.select('skill');
+								} },
 							'Skills'
 						)
 					)
@@ -26987,7 +27003,9 @@ var Nav = function (_React$Component) {
 						{ href: '#project' },
 						_react2.default.createElement(
 							'li',
-							null,
+							{ className: this.state.selected === 'project' ? 'selected' : '', onClick: function onClick() {
+									return _this2.select('project');
+								} },
 							'Projects'
 						)
 					),
@@ -26996,10 +27014,17 @@ var Nav = function (_React$Component) {
 						{ href: '#contact' },
 						_react2.default.createElement(
 							'li',
-							null,
+							{ className: this.state.selected === 'contact' ? 'selected' : '', onClick: function onClick() {
+									return _this2.select('contact');
+								} },
 							'Contact'
 						)
 					)
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'avatar' },
+					_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525637838/323463_2651367759148_317015209_o_czpd5y.jpg' })
 				)
 			);
 		}
@@ -27188,13 +27213,298 @@ var Skill = function (_React$Component) {
 	function Skill() {
 		_classCallCheck(this, Skill);
 
-		return _possibleConstructorReturn(this, (Skill.__proto__ || Object.getPrototypeOf(Skill)).call(this));
+		var _this = _possibleConstructorReturn(this, (Skill.__proto__ || Object.getPrototypeOf(Skill)).call(this));
+
+		_this.state = {
+			mouseOver: ""
+		};
+		return _this;
 	}
 
 	_createClass(Skill, [{
-		key: 'render',
+		key: "revealWordmark",
+		value: function revealWordmark(target) {
+			this.setState({ mouseOver: target });
+		}
+	}, {
+		key: "hiddenWordmark",
+		value: function hiddenWordmark() {
+			this.setState({ mouseOver: "" });
+		}
+	}, {
+		key: "render",
 		value: function render() {
-			return _react2.default.createElement('div', { id: 'skill' });
+			var _this2 = this;
+
+			return _react2.default.createElement(
+				"div",
+				null,
+				_react2.default.createElement(
+					"div",
+					{ className: "skill-title" },
+					_react2.default.createElement(
+						"h1",
+						{ id: "skill" },
+						"SKILLS"
+					)
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "group skills" },
+					_react2.default.createElement(
+						"i",
+						{ className: "devicon-ruby-plain colored", onMouseOver: function onMouseOver() {
+								return _this2.revealWordmark('ruby');
+							}, onMouseOut: function onMouseOut() {
+								return _this2.hiddenWordmark();
+							} },
+						_react2.default.createElement(
+							"a",
+							{ href: "https://www.ruby-lang.org/en/", target: "_blank" },
+							_react2.default.createElement(
+								"div",
+								{ className: "icon-wordmark " + (this.state.mouseOver === 'ruby' ? "" : "hidden") },
+								"Ruby"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"i",
+						{ className: "devicon-rails-plain colored", onMouseOver: function onMouseOver() {
+								return _this2.revealWordmark('rails');
+							}, onMouseOut: function onMouseOut() {
+								return _this2.hiddenWordmark();
+							} },
+						_react2.default.createElement(
+							"a",
+							{ href: "http://rubyonrails.org/", target: "_blank" },
+							_react2.default.createElement(
+								"div",
+								{ className: "icon-wordmark  " + (this.state.mouseOver === 'rails' ? "" : "hidden") },
+								"Ruby on Rails"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"i",
+						{ className: "devicon-react-original colored", onMouseOver: function onMouseOver() {
+								return _this2.revealWordmark('react');
+							}, onMouseOut: function onMouseOut() {
+								return _this2.hiddenWordmark();
+							} },
+						_react2.default.createElement(
+							"a",
+							{ href: "https://reactjs.org/", target: "_blank" },
+							_react2.default.createElement(
+								"div",
+								{ className: "icon-wordmark  " + (this.state.mouseOver === 'react' ? "" : "hidden") },
+								"React"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"i",
+						{ className: "devicon-javascript-plain colored", onMouseOver: function onMouseOver() {
+								return _this2.revealWordmark('js');
+							}, onMouseOut: function onMouseOut() {
+								return _this2.hiddenWordmark();
+							} },
+						_react2.default.createElement(
+							"a",
+							{ href: "https://www.javascript.com/", target: "_blank" },
+							_react2.default.createElement(
+								"div",
+								{ className: "icon-wordmark  " + (this.state.mouseOver === 'js' ? "" : "hidden") },
+								"JavaScript"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"i",
+						{ className: "devicon-nodejs-plain colored", onMouseOver: function onMouseOver() {
+								return _this2.revealWordmark('node');
+							}, onMouseOut: function onMouseOut() {
+								return _this2.hiddenWordmark();
+							} },
+						_react2.default.createElement(
+							"a",
+							{ href: "https://nodejs.org/en/", target: "_blank" },
+							_react2.default.createElement(
+								"div",
+								{ className: "icon-wordmark  " + (this.state.mouseOver === 'node' ? "" : "hidden") },
+								"Node.js"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"i",
+						{ className: "devicon-express-original colored", onMouseOver: function onMouseOver() {
+								return _this2.revealWordmark('express');
+							}, onMouseOut: function onMouseOut() {
+								return _this2.hiddenWordmark();
+							} },
+						_react2.default.createElement(
+							"a",
+							{ href: "http://expressjs.com/", target: "_blank" },
+							_react2.default.createElement(
+								"div",
+								{ className: "icon-wordmark  " + (this.state.mouseOver === 'express' ? "" : "hidden") },
+								"Express.js"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"i",
+						{ className: "devicon-jquery-plain colored", onMouseOver: function onMouseOver() {
+								return _this2.revealWordmark('jquery');
+							}, onMouseOut: function onMouseOut() {
+								return _this2.hiddenWordmark();
+							} },
+						_react2.default.createElement(
+							"a",
+							{ href: "https://jquery.com/", target: "_blank" },
+							_react2.default.createElement(
+								"div",
+								{ className: "icon-wordmark  " + (this.state.mouseOver === 'jquery' ? "" : "hidden") },
+								"jQuery"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"i",
+						{ className: "devicon-d3js-plain colored", onMouseOver: function onMouseOver() {
+								return _this2.revealWordmark('d3');
+							}, onMouseOut: function onMouseOut() {
+								return _this2.hiddenWordmark();
+							} },
+						_react2.default.createElement(
+							"a",
+							{ href: "https://d3js.org/", target: "_blank" },
+							_react2.default.createElement(
+								"div",
+								{ className: "icon-wordmark  " + (this.state.mouseOver === 'd3' ? "" : "hidden") },
+								"D3.js"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"i",
+						{ className: "devicon-postgresql-plain colored", onMouseOver: function onMouseOver() {
+								return _this2.revealWordmark('postgresql');
+							}, onMouseOut: function onMouseOut() {
+								return _this2.hiddenWordmark();
+							} },
+						_react2.default.createElement("a", { href: "https://www.postgresql.org/", target: "_blank" }),
+						_react2.default.createElement(
+							"div",
+							{ className: "icon-wordmark  " + (this.state.mouseOver === 'postgresql' ? "" : "hidden") },
+							"PostgreSQL"
+						)
+					),
+					_react2.default.createElement(
+						"i",
+						{ className: "devicon-mongodb-plain colored", onMouseOver: function onMouseOver() {
+								return _this2.revealWordmark('mongodb');
+							}, onMouseOut: function onMouseOut() {
+								return _this2.hiddenWordmark();
+							} },
+						_react2.default.createElement(
+							"a",
+							{ href: "https://www.mongodb.com/", target: "_blank" },
+							_react2.default.createElement(
+								"div",
+								{ className: "icon-wordmark  " + (this.state.mouseOver === 'mongodb' ? "" : "hidden") },
+								"MongoDB"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"i",
+						{ className: "devicon-html5-plain colored", onMouseOver: function onMouseOver() {
+								return _this2.revealWordmark('html5');
+							}, onMouseOut: function onMouseOut() {
+								return _this2.hiddenWordmark();
+							} },
+						_react2.default.createElement(
+							"a",
+							{ href: "https://www.w3schools.com/html/html5_intro.asp", target: "_blank" },
+							_react2.default.createElement(
+								"div",
+								{ className: "icon-wordmark  " + (this.state.mouseOver === 'html5' ? "" : "hidden") },
+								"HTML5"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"i",
+						{ className: "devicon-css3-plain colored", onMouseOver: function onMouseOver() {
+								return _this2.revealWordmark('css3');
+							}, onMouseOut: function onMouseOut() {
+								return _this2.hiddenWordmark();
+							} },
+						_react2.default.createElement(
+							"a",
+							{ href: "https://www.w3schools.com/css/", target: "_blank" },
+							_react2.default.createElement(
+								"div",
+								{ className: "icon-wordmark  " + (this.state.mouseOver === 'css3' ? "" : "hidden") },
+								"CSS3"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"i",
+						{ className: "devicon-webpack-plain colored", onMouseOver: function onMouseOver() {
+								return _this2.revealWordmark('webpack');
+							}, onMouseOut: function onMouseOut() {
+								return _this2.hiddenWordmark();
+							} },
+						_react2.default.createElement(
+							"a",
+							{ href: "https://webpack.js.org/", target: "_blank" },
+							_react2.default.createElement(
+								"div",
+								{ className: "icon-wordmark  " + (this.state.mouseOver === 'webpack' ? "" : "hidden") },
+								"Webpack"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"i",
+						{ className: "devicon-github-plain colored", onMouseOver: function onMouseOver() {
+								return _this2.revealWordmark('github');
+							}, onMouseOut: function onMouseOut() {
+								return _this2.hiddenWordmark();
+							} },
+						_react2.default.createElement(
+							"a",
+							{ href: "https://github.com/LuuuFan", target: "_blank" },
+							_react2.default.createElement(
+								"div",
+								{ className: "icon-wordmark  " + (this.state.mouseOver === 'github' ? "" : "hidden") },
+								"GitHub"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"i",
+						{ className: "devicon-heroku-plain colored", onMouseOver: function onMouseOver() {
+								return _this2.revealWordmark('heroku');
+							}, onMouseOut: function onMouseOut() {
+								return _this2.hiddenWordmark();
+							} },
+						_react2.default.createElement(
+							"a",
+							{ href: "https://www.heroku.com/", target: "_blank" },
+							_react2.default.createElement(
+								"div",
+								{ className: "icon-wordmark  " + (this.state.mouseOver === 'heroku' ? "" : "hidden") },
+								"Heroku"
+							)
+						)
+					)
+				)
+			);
 		}
 	}]);
 

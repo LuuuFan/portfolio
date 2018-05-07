@@ -2,9 +2,12 @@
 
 @import url("https://use.fontawesome.com/releases/v5.0.9/css/all.css");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url('https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css');
 
 nav {
 	position: fixed;
+	margin-bottom: 75px;
+	z-index: 5;
 	height: 75px;
 	top: 0;
 	padding: 15px;
@@ -27,7 +30,36 @@ nav {
 	}
 	li:hover{
 		text-decoration: underline;
+		transition: all 0.5s;
 	}
+}
+
+.selected{
+	color: white;
+	font-weight: 999;
+	text-decoration: underline;
+	transition: all 0.5s;
+}
+
+.avatar {
+	z-index: 7;
+	position: fixed;
+	top: 20px;
+	left: 45%;
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+	img{
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+h1{
+	font-size: 36px;
+	font-weight: 800;
+	margin-bottom: 30px;
 }
 
 .about-cover-photo{
@@ -50,17 +82,48 @@ nav {
 	margin: auto;
 }
 
-.avatar {
-	position: fixed;
-	top: 20px;
-	left: 45%;
-	height: 150px;
-	width: 150px;
-	border-radius: 50%;
-	overflow: hidden;
-	img{
-		height: 100%;
-		object-fit: cover;
+.skill-title{
+	text-align: center;
+	width: 60%;
+	margin: auto;
+}
+
+#skill{
+	margin-top: 250px;
+}
+
+.hidden{
+	display: none;
+}
+
+.skills{
+	width: 60%;
+	margin: auto;
+	i{
+		cursor: pointer;
+		position: relative;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		float: left;
+		font-size: 148px;
+	}
+	.icon-wordmark{
+		padding-top: 60px;
+		text-shadow: 1px 1px 2px #000000;
+		color: white;
+		text-align: center;
+		font-weight: 999;
+		position: absolute;
+		height: 148px;
+		width: 148px;
+		top: 0;
+		left: 0;
+		font-size: 24px;
+	}
+	i:hover{
+		opacity: 0.5;
+		background: linear-gradient( rgba(20,20,20, .5), rgba(20,20,20, .5));
+		transition: all 0.5s;
 	}
 }
 
@@ -69,7 +132,7 @@ nav {
 	padding-top: 30px;
 	background: linear-gradient(#bdc3c7, #bdc3c7);
 	width: 100%;
-	height: 200px;
+	height: 150px;
 	text-align: center;
 	div{
 		width: 50%;

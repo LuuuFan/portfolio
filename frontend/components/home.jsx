@@ -16,9 +16,6 @@ class Home extends React.Component {
 		return(
 			<div>
 				<Nav />
-				<div className='avatar'>
-					<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1525637838/323463_2651367759148_317015209_o_czpd5y.jpg'/>
-				</div>
 				<About />
 				<Skill />
 				<Project />
