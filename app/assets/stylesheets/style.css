@@ -112,6 +112,7 @@ nav {
   transition: all 0.5s; }
 
 .avatar {
+  cursor: pointer;
   z-index: 7;
   position: fixed;
   top: 20px;
@@ -245,7 +246,8 @@ h1 {
   .project-description p {
     margin: 0 30px; }
   .project-description a:hover {
-    text-decoration: underline; }
+    text-decoration: underline;
+    transition: all 1s; }
 
 .project-screenshoot {
   position: relative;
@@ -266,7 +268,8 @@ h1 {
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 2px #000000; }
+  text-shadow: 1px 1px 2px #000000;
+  transition: all 1s; }
 
 .order-2 {
   flex-direction: row-reverse; }

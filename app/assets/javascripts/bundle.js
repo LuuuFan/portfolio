@@ -26970,6 +26970,14 @@ var Nav = function (_React$Component) {
 			}, 800);
 		}
 	}, {
+		key: 'top',
+		value: function top() {
+			this.setState({ selected: '' });
+			$('html, body').animate({
+				scrollTop: $('body').offset().top
+			}, 800);
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			var _this2 = this;
@@ -27039,7 +27047,9 @@ var Nav = function (_React$Component) {
 				),
 				_react2.default.createElement(
 					'div',
-					{ className: 'avatar' },
+					{ className: 'avatar', onClick: function onClick() {
+							return _this2.top();
+						} },
 					_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525637838/323463_2651367759148_317015209_o_czpd5y.jpg' })
 				)
 			);

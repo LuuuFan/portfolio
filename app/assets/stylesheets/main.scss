@@ -55,6 +55,7 @@ nav {
 }
 
 .avatar {
+	cursor: pointer;
 	z-index: 7;
 	position: fixed;
 	top: 20px;
@@ -218,6 +219,7 @@ h1{
 	}
 	a:hover{
 		text-decoration: underline;
+		transition: all 1s;
 	}
 }
 
@@ -243,7 +245,7 @@ h1{
 	font-size: 24px;
 	font-weight: bold;
 	text-shadow: 1px 1px 2px #000000;
-
+	transition: all 1s;
 }
 
 .order-2{

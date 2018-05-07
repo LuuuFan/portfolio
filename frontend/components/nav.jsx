@@ -27,6 +27,13 @@ class Nav extends React.Component {
 		}, 800);	
 	}
 
+	top(){
+		this.setState({selected: ''});
+		$('html, body').animate({
+			scrollTop: $('body').offset().top
+		}, 800);	
+	}
+
 	render(){
 		return(
 			<nav>
@@ -46,7 +53,7 @@ class Nav extends React.Component {
 						<li className={this.state.selected==='contact' ? 'selected' : ''} onClick={()=>this.select('contact')}>Contact</li>
 					</a>
 				</ul>
-				<div className='avatar'>
+				<div className='avatar' onClick={()=>this.top()}>
 					<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1525637838/323463_2651367759148_317015209_o_czpd5y.jpg'/>
 				</div>
 			</nav>
