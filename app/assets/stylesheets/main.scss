@@ -78,22 +78,12 @@ h1{
 	margin-bottom: 30px;
 }
 
-.about-cover-photo{
-	position: realative;
-	width: 100%;
-	height: 700px;
-	overflow: hidden;
-	img{
-		width: 100%;
-		object-fit: cover;
-	}
+#about{
+	padding-top: 250px;
 }
 
 .about-content{
-	position: absolute;
-	top: 25%;
-	left: 25%;
-	width: 50%;
+	width: 60%;
 	text-align: center;
 	margin: auto;
 }
@@ -332,5 +322,13 @@ h1{
 	background-color: #fcd6d3;
 	a:hover{
 		text-decoration: underline;
+	}
+}
+
+.about-content-main{
+	line-height: 1.5;
+	font-size: 18px;
+	strong{
+		font-weight: bold;
 	}
 }

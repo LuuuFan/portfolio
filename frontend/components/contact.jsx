@@ -21,8 +21,6 @@ class Contact extends React.Component{
 		};
 	}
 
-
-
 	checkInput(type){
 		switch(type){
 			case 'Name':

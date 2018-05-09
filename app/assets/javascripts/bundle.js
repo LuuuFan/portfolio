@@ -27116,33 +27116,78 @@ var About = function (_React$Component) {
 				{ id: 'about' },
 				_react2.default.createElement(
 					'div',
-					{ className: 'about-cover-photo' },
+					{ className: 'about-content' },
+					_react2.default.createElement(
+						'h1',
+						null,
+						'ABOUT ME'
+					),
 					_react2.default.createElement(
 						'div',
-						{ className: 'about-content' },
+						{ className: 'about-content-main' },
 						_react2.default.createElement(
-							'h1',
+							'p',
 							null,
-							'ABOUT ME'
-						),
-						_react2.default.createElement(
-							'div',
-							null,
+							'My name is Lu Fan. I am a software engineer based in the bay area, with strong experience developing web application by using ',
 							_react2.default.createElement(
-								'h2',
+								'strong',
 								null,
-								'NOT ONLY A SOFTWARE ENGINEER'
-							)
-						),
-						_react2.default.createElement(
-							'div',
-							null,
+								'Javascript'
+							),
+							', ',
 							_react2.default.createElement(
-								'h2',
+								'strong',
 								null,
-								'BUT ALSO A ...'
-							)
+								'Ruby on Rails'
+							),
+							', ',
+							_react2.default.createElement(
+								'strong',
+								null,
+								'Node.js'
+							),
+							', ',
+							_react2.default.createElement(
+								'strong',
+								null,
+								'Express.js'
+							),
+							', ',
+							_react2.default.createElement(
+								'strong',
+								null,
+								'React'
+							),
+							', ',
+							_react2.default.createElement(
+								'strong',
+								null,
+								'Redux'
+							),
+							'. I also have ',
+							_react2.default.createElement(
+								'strong',
+								null,
+								'10+'
+							),
+							' years ',
+							_react2.default.createElement(
+								'strong',
+								null,
+								'Quality Assurance'
+							),
+							' experience. I am currently looking for a company where my skills and abilities can make a difference in creating great products and delivering customer value.'
 						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'about-content-second' },
+						_react2.default.createElement(
+							'h2',
+							null,
+							'I\'m also a ...'
+						),
+						_react2.default.createElement('div', null)
 					)
 				)
 			);
