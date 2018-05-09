@@ -251,3 +251,53 @@ h1{
 .order-2{
 	flex-direction: row-reverse;
 }
+
+#contact{
+	width: 60%;
+	margin: 50px auto;
+	form{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		div{
+			display: flex;
+			div{
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				margin-right: 20px;
+				input{
+					border: 1px solid #bdc3c7;
+					margin-bottom: 10px;
+					border-radius: 5px;
+				}
+			}
+			textarea{
+				border: 1px solid #bdc3c7;
+				border-radius: 5px;
+				height: 100%;
+				resize: none;
+			}
+		}
+		input[type='submit']{
+			margin-top: 20px;
+			padding: 5px 10px;
+			border: 1px solid #bdc3c7;
+			border-radius: 5px;
+			background-color: #bdc3c7;
+		}
+		input[type='submit']:hover{
+			color: white;
+			font-size: bold;
+			background-color: gray;
+			border: 1px solid gray;
+		}
+	}
+}
+
+.message-notification{
+	border-radius: 5px;
+	padding: 5px 10px;
+	background: linear-gradient(#A1FFCE, #FAFFD1) ;
+	margin-bottom: 15px;
+}

@@ -3,7 +3,7 @@ import Nav from './nav';
 import About from './about';
 import Skill from './skill';
 import Project from './project';
-import Contact from './contact';
+import ContactContainer from './contact_container';
 import Footer from './footer';
 
 class Home extends React.Component {
@@ -19,7 +19,7 @@ class Home extends React.Component {
 				<About />
 				<Skill />
 				<Project />
-				<Contact />
+				<ContactContainer />
 				<Footer />
 			</div>
 		);
