@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {receiveError, clearError} from '../actions/error';
+import {receiveError, clearError, clearAllError} from '../actions/error';
 import {receiveMessage} from '../actions/message';
 // import {sendContact} from '../actions/contact';
 import Contact from './contact';
@@ -14,7 +14,8 @@ const mapDispatchToProps = (dispatch) => ({
 	// sendContact: (message) => dispatch(sendContact(message))
 	receiveMessage: (message) => dispatch(receiveMessage(message)),
 	receiveError: (error) => dispatch(receiveError(error)),
-	clearError: ()=>dispatch(clearError())
+	clearError: (type)=>dispatch(clearError(type)),
+	clearAllError: ()=>dispatch(clearAllError())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Contact);

@@ -27790,8 +27790,11 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 		receiveError: function receiveError(error) {
 			return dispatch((0, _error.receiveError)(error));
 		},
-		clearError: function clearError() {
-			return dispatch((0, _error.clearError)());
+		clearError: function clearError(type) {
+			return dispatch((0, _error.clearError)(type));
+		},
+		clearAllError: function clearAllError() {
+			return dispatch((0, _error.clearAllError)());
 		}
 	};
 };
@@ -27858,13 +27861,9 @@ var Contact = function (_React$Component) {
 			name: '',
 			phone: '',
 			email: '',
-			message: '',
-			errorName: '',
-			errorPhone: '',
-			errorEmail: '',
-			errorMessage: ''
+			message: ''
 		};
-		_this.handleInput = _this.handleInput.bind(_this);
+		// this.handleInput = this.handleInput.bind(this);
 		return _this;
 	}
 
@@ -27874,9 +27873,6 @@ var Contact = function (_React$Component) {
 			var _this2 = this;
 
 			var errorType = 'error' + type.charAt(0).toUpperCase() + type.slice(1);
-			if (this.state[errorType]) {
-				this.setState(_defineProperty({}, errorType, ""));
-			}
 			return function (e) {
 				_this2.setState(_defineProperty({}, type, e.target.value));
 			};
@@ -27887,9 +27883,14 @@ var Contact = function (_React$Component) {
 			switch (type) {
 				case 'Name':
 					if (this.state.name) {
+						if (this.props.error['error' + type]) {
+							this.props.clearError('error' + type);
+						}
 						return true;
 					} else {
-						this.setState({ errorName: 'Please input your name' });
+						if (!this.props.error['error' + type]) {
+							this.props.receiveError({ errorName: 'Please input your name' });
+						}
 						return false;
 					}
 				case 'Phone':
@@ -27897,38 +27898,49 @@ var Contact = function (_React$Component) {
 				case 'Email':
 					var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 					if (!this.state.email) {
-						this.setState({ errorEmail: 'Please input your email address' });
+						this.props.receiveError({ errorEmail: 'Please input your email address' });
 						return false;
 					} else if (!re.test(String(this.state.email).toLowerCase())) {
-						this.setState({ errorEmail: 'Not a valid email address' });
+						this.props.receiveError({ errorEmail: 'Not a valid email address' });
 						return false;
 					} else {
+						this.props.clearError('error' + type);
 						return true;
 					}
 				case 'Message':
 					if (this.state.message) {
+						if (this.props.error['error' + type]) {
+							this.props.clearError('error' + type);
+						}
 						return true;
 					} else {
-						this.setState({ errorMessage: 'Please say something to me~:)' });
+						if (!this.props.error['error' + type]) {
+							this.props.receiveError({ errorMessage: 'Please say something to me~:)' });
+						}
 						return false;
 					}
 			}
+		}
+	}, {
+		key: 'checkAll',
+		value: function checkAll() {
+			return this.checkInput('Name') && this.checkInput('Email') && this.checkInput('Message');
 		}
 	}, {
 		key: 'sendMessage',
 		value: function sendMessage() {
 			var _this3 = this;
 
-			if (!this.state.errorName && !this.state.errorPhone && !this.state.errorEmail && !this.state.errorMessage) {
+			if (this.checkAll()) {
 				emailjs.send("default_service", "portfolio", this.state).then(function (res) {
 					if (res.status === 200) {
 						_this3.props.receiveMessage(_this3.state);
 						_this3.emptyInput();
 					}
 				}, function (err) {
-					_this3.props.receiveError(err);
+					_this3.props.receiveError({ error: err });
 				});
-			}
+			} else {}
 		}
 	}, {
 		key: 'emptyInput',
@@ -27962,7 +27974,18 @@ var Contact = function (_React$Component) {
 					{ className: 'message-notification' },
 					'Thanks ',
 					message.name,
-					', your message has been sent.'
+					', your message has been sent. I will get back to you soon!'
+				) : "",
+				error.error ? _react2.default.createElement(
+					'div',
+					{ className: 'error-send-email' },
+					'Oooops~ seems there is an error, please send email to ',
+					_react2.default.createElement(
+						'a',
+						{ href: 'mailto:angelia.fan@gmail.com' },
+						'Angelia.fan@gmail.com'
+					),
+					'.'
 				) : "",
 				_react2.default.createElement(
 					'form',
@@ -27973,30 +27996,47 @@ var Contact = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							null,
-							_react2.default.createElement('input', { type: 'text', placeholder: 'Your name', value: this.state.name, onChange: this.handleInput('name'), onBlur: function onBlur() {
+							_react2.default.createElement('input', { type: 'text', placeholder: 'Please enter your name *', value: this.state.name, onChange: this.handleInput('name'), onBlur: function onBlur() {
 									return _this4.checkInput('Name');
 								} }),
-							_react2.default.createElement('input', { type: 'text', placeholder: 'Email', value: this.state.email, onChange: this.handleInput('email'), onBlur: function onBlur() {
+							_react2.default.createElement(
+								'div',
+								{ className: 'error' },
+								error.errorName ? error.errorName : ''
+							),
+							_react2.default.createElement('input', { type: 'text', placeholder: 'Please enter your email *', value: this.state.email, onChange: this.handleInput('email'), onBlur: function onBlur() {
 									return _this4.checkInput('Email');
 								} }),
-							_react2.default.createElement('input', { type: 'text', placeholder: 'Phone Number', value: this.state.phone, onChange: this.handleInput('phone'), onBlur: function onBlur() {
+							_react2.default.createElement(
+								'div',
+								{ className: 'error' },
+								error.errorEmail ? error.errorEmail : ''
+							),
+							_react2.default.createElement('input', { type: 'text', placeholder: 'Please enter your phone Number', value: this.state.phone, onChange: this.handleInput('phone'), onBlur: function onBlur() {
 									return _this4.checkInput('Phone');
-								} })
+								} }),
+							_react2.default.createElement(
+								'div',
+								{ className: 'error' },
+								error.errorPhone ? error.errorPhone : ''
+							)
 						),
 						_react2.default.createElement(
 							'div',
 							{ className: 'contact-message' },
-							_react2.default.createElement('textarea', { placeholder: 'Message', value: this.state.message, onChange: this.handleInput('message'), onBlur: function onBlur() {
+							_react2.default.createElement('textarea', { placeholder: 'Message for me *', value: this.state.message, onChange: this.handleInput('message'), onBlur: function onBlur() {
 									return _this4.checkInput('Message');
 								} }),
 							_react2.default.createElement(
 								'div',
-								null,
-								this.state.errorMessage
+								{ className: 'error' },
+								error.errorMessage ? error.errorMessage : ''
 							)
 						)
 					),
-					_react2.default.createElement('input', { type: 'submit', value: 'Send', onClick: function onClick() {
+					_react2.default.createElement('input', { type: 'submit', value: 'Send', onMouseOver: function onMouseOver() {
+							return _this4.checkAll();
+						}, onClick: function onClick() {
 							return _this4.sendMessage();
 						} })
 				)
@@ -28104,6 +28144,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 var RECEIVE_ERROR = exports.RECEIVE_ERROR = 'RECEIVE_ERROR';
 var CLEAR_ERROR = exports.CLEAR_ERROR = 'CLEAR_ERROR';
+var CLEAR_ALL_ERROR = exports.CLEAR_ALL_ERROR = 'CLEAR_ALL_ERROR';
 
 var receiveError = exports.receiveError = function receiveError(error) {
 	return {
@@ -28112,9 +28153,16 @@ var receiveError = exports.receiveError = function receiveError(error) {
 	};
 };
 
-var clearError = exports.clearError = function clearError() {
+var clearError = exports.clearError = function clearError(errorType) {
 	return {
-		type: CLEAR_ERROR
+		type: CLEAR_ERROR,
+		errorType: errorType
+	};
+};
+
+var clearAllError = exports.clearAllError = function clearAllError() {
+	return {
+		type: CLEAR_ALL_ERROR
 	};
 };
 
@@ -28158,8 +28206,12 @@ var errorReducer = function errorReducer() {
 	var newState = void 0;
 	switch (action.type) {
 		case _error.RECEIVE_ERROR:
-			return action.error;
+			return Object.assign({}, state, action.error);
 		case _error.CLEAR_ERROR:
+			newState = Object.assign({}, state);
+			newState[action.errorType] = "";
+			return newState;
+		case _error.CLEAR_ALL_ERROR:
 			return {};
 		default:
 			return state;

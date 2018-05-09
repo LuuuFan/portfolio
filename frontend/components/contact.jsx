@@ -9,32 +9,32 @@ class Contact extends React.Component{
 			name:'',
 			phone: '',
 			email: '',
-			message: '',
-			errorName: '',
-			errorPhone: '',
-			errorEmail: '',
-			errorMessage: '',
+			message: ''
 		};
-		this.handleInput = this.handleInput.bind(this);
+		// this.handleInput = this.handleInput.bind(this);
 	}
 
 	handleInput(type){
 		const errorType = 'error' + type.charAt(0).toUpperCase() + type.slice(1);
-		if (this.state[errorType]) {
-			this.setState({[errorType]: ""});
-		}
 		return (e) => {
 			this.setState({[type]: e.target.value});
 		};
 	}
 
+
+
 	checkInput(type){
 		switch(type){
 			case 'Name':
 				if (this.state.name) {
+					if (this.props.error[`error${type}`]) {
+						this.props.clearError(`error${type}`);
+					}
 					return true;
 				} else {
-					this.setState({errorName: 'Please input your name'});
+					if (!this.props.error[`error${type}`]) {
+						this.props.receiveError({errorName: 'Please input your name'});
+					}
 					return false;
 				}
 			case 'Phone':
@@ -42,38 +42,47 @@ class Contact extends React.Component{
 			case 'Email':
 				const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 				if(!this.state.email){
-					this.setState({errorEmail: 'Please input your email address'});
+					this.props.receiveError({errorEmail: 'Please input your email address'});
 					return false;
 				}
 				else if (!re.test(String(this.state.email).toLowerCase())) { 
-					this.setState({errorEmail: 'Not a valid email address'});
+					this.props.receiveError({errorEmail: 'Not a valid email address'});
 					return false;
 				} else {
+					this.props.clearError(`error${type}`);
 					return true;
 				}
 			case 'Message':
 				if (this.state.message) {
+					if (this.props.error[`error${type}`]) {
+						this.props.clearError(`error${type}`);
+					}
 					return true;
 				} else {
-					this.setState({errorMessage: 'Please say something to me~:)'});
+					if (!this.props.error[`error${type}`]) {
+						this.props.receiveError({errorMessage: 'Please say something to me~:)'});
+					}
 					return false;
 				}
 		}
+	}
 
-
+	checkAll(){
+		return this.checkInput('Name') && this.checkInput('Email') && this.checkInput('Message');
 	}
 
 	sendMessage(){
-		if (!this.state.errorName && !this.state.errorPhone && !this.state.errorEmail && !this.state.errorMessage) {
-		emailjs.send("default_service","portfolio", this.state)
-			.then((res)=>{
-				if (res.status === 200) {
-					this.props.receiveMessage(this.state);
-					this.emptyInput();
-				}
-			}, (err)=>{
-				this.props.receiveError(err);
-			});	
+		if (this.checkAll()) {
+			emailjs.send("default_service","portfolio", this.state)
+				.then((res)=>{
+					if (res.status === 200) {
+						this.props.receiveMessage(this.state);
+						this.emptyInput();
+					}
+				}, (err)=>{
+					this.props.receiveError({error: err});
+				});	
+		} else {
 		}
 	}
 
@@ -92,21 +101,27 @@ class Contact extends React.Component{
 			<div id='contact'>
 				<h1>CONTACT</h1>
 				{message.name ? <div className='message-notification'>
-					Thanks {message.name}, your message has been sent.
+					Thanks {message.name}, your message has been sent. I will get back to you soon!
+				</div> : ""}
+				{error.error ? <div className='error-send-email'>
+					Oooops~ seems there is an error, please send email to <a href='mailto:angelia.fan@gmail.com'>Angelia.fan@gmail.com</a>.
 				</div> : ""}
 				<form>
 					<div>
 						<div>
-							<input type='text' placeholder='Your name' value={this.state.name} onChange={this.handleInput('name')} onBlur={()=>this.checkInput('Name')}/>
-							<input type='text' placeholder='Email'  value={this.state.email} onChange={this.handleInput('email')} onBlur={()=>this.checkInput('Email')}/>
-							<input type='text' placeholder='Phone Number'  value={this.state.phone} onChange={this.handleInput('phone')} onBlur={()=>this.checkInput('Phone')}/>
+							<input type='text' placeholder='Please enter your name *' value={this.state.name} onChange={this.handleInput('name')} onBlur={()=>this.checkInput('Name')}/>
+							<div className='error'>{error.errorName ? error.errorName : ''}</div>
+							<input type='text' placeholder='Please enter your email *'  value={this.state.email} onChange={this.handleInput('email')} onBlur={()=>this.checkInput('Email')}/>
+							<div className='error'>{error.errorEmail ? error.errorEmail : ''}</div>
+							<input type='text' placeholder='Please enter your phone Number'  value={this.state.phone} onChange={this.handleInput('phone')} onBlur={()=>this.checkInput('Phone')}/>
+							<div className='error'>{error.errorPhone ? error.errorPhone : ''}</div>
 						</div>
 						<div className='contact-message'>
-							<textarea placeholder='Message'  value={this.state.message} onChange={this.handleInput('message')} onBlur={()=>this.checkInput('Message')}/>
-							<div>{this.state.errorMessage}</div>
+							<textarea placeholder='Message for me *'  value={this.state.message} onChange={this.handleInput('message')} onBlur={()=>this.checkInput('Message')}/>
+							<div className='error'>{error.errorMessage ? error.errorMessage : ''}</div>
 						</div>
 					</div>
-					<input type='submit' value='Send' onClick={()=>this.sendMessage()}/>
+					<input type='submit' value='Send' onMouseOver={()=>this.checkAll()} onClick={()=>this.sendMessage()}/>
 				</form>
 			</div>
 		);

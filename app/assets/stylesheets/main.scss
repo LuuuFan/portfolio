@@ -259,25 +259,30 @@ h1{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		width: 100%;
 		div{
+			width: 100%;
 			display: flex;
+			align-ites: center;
+			justify-content: space-between;			
 			div{
-				flex: 1;
+				width: 48%;
+				height: 150px;
 				display: flex;
 				flex-direction: column;
-				margin-right: 20px;
+				justify-content: space-between;
 				input{
 					font-size: 14px;
 					text-align: left;
 					padding: 7px 15px;
 					border: 1px solid #bdc3c7;
-					margin-bottom: 10px;
 					border-radius: 5px;
 				}
 			}
 			.contact-message{
 				display: flex;
 				flex-direction: column;
+				justify-content: space-between;
 				border: 1px solid #bdc3c7;
 				border-radius: 5px;
 				textarea{
@@ -285,19 +290,14 @@ h1{
 					font-size: 14px;
 					padding: 10px;
 					width: 100%;
-					height: 80%;
+					height: 90%;
 					resize: none;
-				}
-				div{
-					font-size: 12px;
-					color: red;
-				}
-				
+				}				
 			}
 		}
 		input[type='submit']{
 			margin-top: 20px;
-			padding: 5px 10px;
+			padding: 10px 30px;
 			border: 1px solid #bdc3c7;
 			border-radius: 5px;
 			background-color: #bdc3c7;
@@ -311,9 +311,26 @@ h1{
 	}
 }
 
-.message-notification{
+.error{
+	width: 100%;
+	font-size: 12px;
+	color: red;
+}
+
+.message-notification, .error-send-email{
 	border-radius: 5px;
 	padding: 5px 10px;
-	background: linear-gradient(#A1FFCE, #FAFFD1) ;
 	margin-bottom: 15px;
+	transition: all 0.5s;
+}
+
+.message-notification{
+	background-color: #d0f2db;
+}
+
+.error-send-email{
+	background-color: #fcd6d3;
+	a:hover{
+		text-decoration: underline;
+	}
 }
