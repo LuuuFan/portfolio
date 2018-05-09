@@ -27875,7 +27875,7 @@ var Contact = function (_React$Component) {
 
 			var errorType = 'error' + type.charAt(0).toUpperCase() + type.slice(1);
 			if (this.state[errorType]) {
-				this.state.setState(_defineProperty({}, errorType, ""));
+				this.setState(_defineProperty({}, errorType, ""));
 			}
 			return function (e) {
 				_this2.setState(_defineProperty({}, type, e.target.value));
@@ -27886,12 +27886,21 @@ var Contact = function (_React$Component) {
 		value: function checkInput(type) {
 			switch (type) {
 				case 'Name':
+					if (this.state.name) {
+						return true;
+					} else {
+						this.setState({ errorName: 'Please input your name' });
+						return false;
+					}
 				case 'Phone':
-
+					return true;
 				case 'Email':
 					var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-					if (!re.test(String(this.state.email).toLowerCase())) {
-						this.setState({ error: 'Not a valid email address' });
+					if (!this.state.email) {
+						this.setState({ errorEmail: 'Please input your email address' });
+						return false;
+					} else if (!re.test(String(this.state.email).toLowerCase())) {
+						this.setState({ errorEmail: 'Not a valid email address' });
 						return false;
 					} else {
 						return true;
@@ -27900,6 +27909,7 @@ var Contact = function (_React$Component) {
 					if (this.state.message) {
 						return true;
 					} else {
+						this.setState({ errorMessage: 'Please say something to me~:)' });
 						return false;
 					}
 			}
@@ -27963,14 +27973,27 @@ var Contact = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							null,
-							_react2.default.createElement('input', { type: 'text', placeholder: 'Your name', value: this.state.name, onChange: this.handleInput('name') }),
-							_react2.default.createElement('input', { type: 'text', placeholder: 'Email', value: this.state.email, onChange: this.handleInput('email') }),
-							_react2.default.createElement('input', { type: 'text', placeholder: 'Phone Number', value: this.state.phone, onChange: this.handleInput('phone') })
+							_react2.default.createElement('input', { type: 'text', placeholder: 'Your name', value: this.state.name, onChange: this.handleInput('name'), onBlur: function onBlur() {
+									return _this4.checkInput('Name');
+								} }),
+							_react2.default.createElement('input', { type: 'text', placeholder: 'Email', value: this.state.email, onChange: this.handleInput('email'), onBlur: function onBlur() {
+									return _this4.checkInput('Email');
+								} }),
+							_react2.default.createElement('input', { type: 'text', placeholder: 'Phone Number', value: this.state.phone, onChange: this.handleInput('phone'), onBlur: function onBlur() {
+									return _this4.checkInput('Phone');
+								} })
 						),
 						_react2.default.createElement(
 							'div',
-							null,
-							_react2.default.createElement('textarea', { placeholder: 'Message', value: this.state.message, onChange: this.handleInput('message') })
+							{ className: 'contact-message' },
+							_react2.default.createElement('textarea', { placeholder: 'Message', value: this.state.message, onChange: this.handleInput('message'), onBlur: function onBlur() {
+									return _this4.checkInput('Message');
+								} }),
+							_react2.default.createElement(
+								'div',
+								null,
+								this.state.errorMessage
+							)
 						)
 					),
 					_react2.default.createElement('input', { type: 'submit', value: 'Send', onClick: function onClick() {
