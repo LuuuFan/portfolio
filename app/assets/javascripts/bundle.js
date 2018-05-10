@@ -26982,19 +26982,19 @@ var _about = __webpack_require__(121);
 
 var _about2 = _interopRequireDefault(_about);
 
-var _skill = __webpack_require__(123);
+var _skill = __webpack_require__(124);
 
 var _skill2 = _interopRequireDefault(_skill);
 
-var _project = __webpack_require__(124);
+var _project = __webpack_require__(125);
 
 var _project2 = _interopRequireDefault(_project);
 
-var _contact_container = __webpack_require__(125);
+var _contact_container = __webpack_require__(126);
 
 var _contact_container2 = _interopRequireDefault(_contact_container);
 
-var _footer = __webpack_require__(128);
+var _footer = __webpack_require__(129);
 
 var _footer2 = _interopRequireDefault(_footer);
 
@@ -27212,7 +27212,7 @@ var _pet = __webpack_require__(122);
 
 var _pet2 = _interopRequireDefault(_pet);
 
-var _outdoor = __webpack_require__(129);
+var _outdoor = __webpack_require__(123);
 
 var _outdoor2 = _interopRequireDefault(_outdoor);
 
@@ -27450,6 +27450,72 @@ exports.default = Pet;
 
 /***/ }),
 /* 123 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Outdoor = function (_React$Component) {
+	_inherits(Outdoor, _React$Component);
+
+	function Outdoor() {
+		_classCallCheck(this, Outdoor);
+
+		var _this = _possibleConstructorReturn(this, (Outdoor.__proto__ || Object.getPrototypeOf(Outdoor)).call(this));
+
+		_this.state = {
+			img: [],
+			url: ''
+		};
+		return _this;
+	}
+
+	_createClass(Outdoor, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {}
+	}, {
+		key: 'swapPic',
+		value: function swapPic() {}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				null,
+				_react2.default.createElement(
+					'div',
+					{ className: 'hobby-container' },
+					_react2.default.createElement('img', { src: this.state.url })
+				)
+			);
+		}
+	}]);
+
+	return Outdoor;
+}(_react2.default.Component);
+
+exports.default = Outdoor;
+
+/***/ }),
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27797,7 +27863,7 @@ var Skill = function (_React$Component) {
 exports.default = Skill;
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27860,169 +27926,155 @@ var Project = function (_React$Component) {
 				),
 				_react2.default.createElement(
 					'div',
-					{ className: 'project-list order-1' },
+					{ className: 'project-list' },
 					_react2.default.createElement(
 						'div',
-						{ className: 'single-project' },
+						{ className: 'project-col' },
 						_react2.default.createElement(
 							'div',
-							{ className: 'project-description' },
+							{ className: 'single-project' },
 							_react2.default.createElement(
-								'h2',
-								null,
+								'div',
+								{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
+										return _this2.revealCover('celp');
+									}, onMouseOut: function onMouseOut() {
+										return _this2.hideCover();
+									} },
 								_react2.default.createElement(
 									'a',
 									{ href: 'https://celp.herokuapp.com/#/', target: '_blank' },
-									'Celp'
+									_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525671485/1500759_10202453164706123_223987173_o_ac1x8t.jpg' }),
+									_react2.default.createElement(
+										'div',
+										{ className: 'project-cover black' },
+										_react2.default.createElement(
+											'h2',
+											null,
+											'Celp'
+										)
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: this.state.hidden === 'celp' ? "link" : 'hidden' },
+										_react2.default.createElement('i', { className: 'fas fa-link' }),
+										_react2.default.createElement(
+											'p',
+											null,
+											'A Full Stack Web Application inspired by Yelp, developed in Ruby on Rails, React, etc.  '
+										)
+									)
 								)
-							),
-							_react2.default.createElement(
-								'p',
-								null,
-								'A Full Stack Web Application inspired by Yelp, developed in Ruby on Rails, React, etc.  '
 							)
 						),
 						_react2.default.createElement(
 							'div',
-							{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
-									return _this2.revealCover('celp');
-								}, onMouseOut: function onMouseOut() {
-									return _this2.hideCover();
-								} },
+							{ className: 'single-project' },
 							_react2.default.createElement(
-								'a',
-								{ href: 'https://celp.herokuapp.com/#/', target: '_blank' },
-								_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525672532/Screenshot_from_2018-05-06_22-55-08_xdp1qj.png' }),
-								_react2.default.createElement(
-									'div',
-									{ className: 'project-cover ' + (this.state.hidden === 'celp' ? '' : 'hidden') },
-									'CELP'
-								)
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'single-project order-2' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'project-description' },
-							_react2.default.createElement(
-								'h2',
-								null,
-								_react2.default.createElement(
-									'a',
-									{ href: 'https://homeco.herokuapp.com/#/', target: '_blank' },
-									'Homeco'
-								)
-							),
-							_react2.default.createElement(
-								'p',
-								null,
-								'An All-in-one Home Service and Schedule management Project structured by MERN Stack'
-							)
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
-									return _this2.revealCover('homeco');
-								}, onMouseOut: function onMouseOut() {
-									return _this2.hideCover();
-								} },
-							_react2.default.createElement(
-								'a',
-								{ href: 'https://homeco.herokuapp.com/#/', target: '_blank' },
-								_react2.default.createElement('img', { src: 'http://res.cloudinary.com/ddwejrtgh/image/upload/v1525672533/Screenshot_from_2018-05-06_22-54-48_gqbzfh.png' }),
-								_react2.default.createElement(
-									'div',
-									{ className: 'project-cover ' + (this.state.hidden === 'homeco' ? '' : 'hidden') },
-									'HOMECO'
-								)
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'single-project order-1' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'project-description' },
-							_react2.default.createElement(
-								'h2',
-								null,
-								_react2.default.createElement(
-									'a',
-									{ href: 'https://hyouuu.github.io/PendoWeb/#/', target: '_blank' },
-									'Pendo'
-								)
-							),
-							_react2.default.createElement(
-								'p',
-								null,
-								'Web application for ',
-								_react2.default.createElement(
-									'a',
-									{ href: 'https://itunes.apple.com/us/app/pendo-note/id805451002?mt=8', target: '_blank' },
-									'Pendo Note iOS app'
-								),
-								', crispy notebook for any ideas'
-							)
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
-									return _this2.revealCover('pendo');
-								}, onMouseOut: function onMouseOut() {
-									return _this2.hideCover();
-								} },
-							_react2.default.createElement(
-								'a',
-								{ href: 'https://hyouuu.github.io/PendoWeb/#/', target: '_blank' },
-								_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525672680/Screenshot_from_2018-05-06_22-57-33_sntjd8.png' }),
-								_react2.default.createElement(
-									'div',
-									{ className: 'project-cover ' + (this.state.hidden === 'pendo' ? '' : 'hidden') },
-									'PENDO'
-								)
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'single-project order-2' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'project-description' },
-							_react2.default.createElement(
-								'h2',
-								null,
+								'div',
+								{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
+										return _this2.revealCover('petta');
+									}, onMouseOut: function onMouseOut() {
+										return _this2.hideCover();
+									} },
 								_react2.default.createElement(
 									'a',
 									{ href: 'https://luuufan.github.io/petta/', target: '_blank' },
-									'Petta'
+									_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889364/1795238_10202694170131108_475398263_o_lgt47u.jpg' }),
+									_react2.default.createElement(
+										'div',
+										{ className: 'project-cover white' },
+										_react2.default.createElement(
+											'h2',
+											null,
+											'Petta'
+										)
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: this.state.hidden === 'petta' ? "link" : 'hidden' },
+										_react2.default.createElement('i', { className: 'fas fa-link' }),
+										_react2.default.createElement(
+											'p',
+											null,
+											'A Data Visualization project build with JavaScript, D3.JS and Webpack.'
+										)
+									)
 								)
-							),
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'project-col' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'single-project' },
 							_react2.default.createElement(
-								'p',
-								null,
-								'A Data Visualization project build with JavaScript, D3.JS and Webpack.  '
+								'div',
+								{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
+										return _this2.revealCover('pendo');
+									}, onMouseOut: function onMouseOut() {
+										return _this2.hideCover();
+									} },
+								_react2.default.createElement(
+									'a',
+									{ href: 'https://hyouuu.github.io/PendoWeb/#/', target: '_blank' },
+									_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525917761/%E8%8D%94%E6%9E%9D%E5%B2%9B-0_rzvy6v.png' }),
+									_react2.default.createElement(
+										'div',
+										{ className: 'project-cover white' },
+										_react2.default.createElement(
+											'h2',
+											null,
+											'Pendo'
+										)
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: this.state.hidden === 'pendo' ? "link" : 'hidden' },
+										_react2.default.createElement('i', { className: 'fas fa-link' }),
+										_react2.default.createElement(
+											'p',
+											null,
+											'Web application for Pendo Note iOS app, crispy notebook for any ideas'
+										)
+									)
+								)
 							)
 						),
 						_react2.default.createElement(
 							'div',
-							{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
-									return _this2.revealCover('petta');
-								}, onMouseOut: function onMouseOut() {
-									return _this2.hideCover();
-								} },
+							{ className: 'single-project' },
 							_react2.default.createElement(
-								'a',
-								{ href: 'https://luuufan.github.io/petta/', target: '_blank' },
-								_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525672702/Screenshot_from_2018-05-06_22-58-09_s8hot0.png' }),
+								'div',
+								{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
+										return _this2.revealCover('homeco');
+									}, onMouseOut: function onMouseOut() {
+										return _this2.hideCover();
+									} },
 								_react2.default.createElement(
-									'div',
-									{ className: 'project-cover ' + (this.state.hidden === 'petta' ? '' : 'hidden') },
-									'PETTA'
+									'a',
+									{ href: 'https://homeco.herokuapp.com/#/', target: '_blank' },
+									_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1520956849/IMG_0762_gqpfuc.jpg' }),
+									_react2.default.createElement(
+										'div',
+										{ className: 'project-cover black' },
+										_react2.default.createElement(
+											'h2',
+											null,
+											'Homeco'
+										)
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: this.state.hidden === 'homeco' ? "link" : 'hidden' },
+										_react2.default.createElement('i', { className: 'fas fa-link' }),
+										_react2.default.createElement(
+											'p',
+											null,
+											'An All-in-one Home Service and Schedule management Project structured by MERN Stack'
+										)
+									)
 								)
 							)
 						)
@@ -28038,7 +28090,7 @@ var Project = function (_React$Component) {
 exports.default = Project;
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28058,7 +28110,7 @@ var _error = __webpack_require__(33);
 
 var _message = __webpack_require__(34);
 
-var _contact = __webpack_require__(126);
+var _contact = __webpack_require__(127);
 
 var _contact2 = _interopRequireDefault(_contact);
 
@@ -28094,7 +28146,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_contact2.default);
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28110,7 +28162,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _contact = __webpack_require__(127);
+var _contact = __webpack_require__(128);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28323,7 +28375,7 @@ var Contact = function (_React$Component) {
 exports.default = Contact;
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28341,7 +28393,7 @@ var sendContact = exports.sendContact = function sendContact(message) {
 };
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28422,72 +28474,6 @@ var Footer = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Footer;
-
-/***/ }),
-/* 129 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Outdoor = function (_React$Component) {
-	_inherits(Outdoor, _React$Component);
-
-	function Outdoor() {
-		_classCallCheck(this, Outdoor);
-
-		var _this = _possibleConstructorReturn(this, (Outdoor.__proto__ || Object.getPrototypeOf(Outdoor)).call(this));
-
-		_this.state = {
-			img: [],
-			url: ''
-		};
-		return _this;
-	}
-
-	_createClass(Outdoor, [{
-		key: 'componentDidMount',
-		value: function componentDidMount() {}
-	}, {
-		key: 'swapPic',
-		value: function swapPic() {}
-	}, {
-		key: 'render',
-		value: function render() {
-			return _react2.default.createElement(
-				'div',
-				null,
-				_react2.default.createElement(
-					'div',
-					{ className: 'hobby-container' },
-					_react2.default.createElement('img', { src: this.state.url })
-				)
-			);
-		}
-	}]);
-
-	return Outdoor;
-}(_react2.default.Component);
-
-exports.default = Outdoor;
 
 /***/ })
 /******/ ]);

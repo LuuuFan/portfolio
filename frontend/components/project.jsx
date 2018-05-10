@@ -20,59 +20,68 @@ class Project extends React.Component{
 		return(
 			<div id='project'>
 				<h1>PORTFOLIO</h1>
-				<div className='project-list order-1'>
-					<div className='single-project'>
-						<div className='project-description'>
-							<h2><a href='https://celp.herokuapp.com/#/' target='_blank'>Celp</a></h2>
-							<p>A Full Stack Web Application inspired by Yelp, developed in Ruby on Rails, React, etc.	 </p>
+				<div className='project-list'>
+					<div className='project-col'>
+						<div className='single-project'>
+							<div className='project-screenshoot'  onMouseOver={()=>this.revealCover('celp')} onMouseOut={()=>this.hideCover()}>
+								<a href='https://celp.herokuapp.com/#/' target='_blank'>
+									<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1525671485/1500759_10202453164706123_223987173_o_ac1x8t.jpg' />
+									<div className='project-cover black'>
+										<h2>Celp</h2>
+									</div>
+									<div className={this.state.hidden==='celp' ? "link" : 'hidden'}>
+										<i className="fas fa-link"></i>
+										<p>A Full Stack Web Application inspired by Yelp, developed in Ruby on Rails, React, etc.	 </p>
+									</div>
+								</a>
+							</div>
 						</div>
-						<div className='project-screenshoot'  onMouseOver={()=>this.revealCover('celp')} onMouseOut={()=>this.hideCover()}>
-							<a href='https://celp.herokuapp.com/#/' target='_blank'>
-								<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1525672532/Screenshot_from_2018-05-06_22-55-08_xdp1qj.png' />
-								<div className={`project-cover ${this.state.hidden==='celp' ? '' : 'hidden'}`}>CELP</div>
-							</a>
-						</div>
-					</div>
-					
-					<div className='single-project order-2'>
-						<div className='project-description'>
-							<h2><a href='https://homeco.herokuapp.com/#/' target='_blank'>Homeco</a></h2>
-							<p>An All-in-one Home Service and Schedule management Project structured by MERN Stack	 
-</p>
-						</div>
-						<div className='project-screenshoot'  onMouseOver={()=>this.revealCover('homeco')} onMouseOut={()=>this.hideCover()}>
-							<a href='https://homeco.herokuapp.com/#/' target='_blank'>
-								<img src='http://res.cloudinary.com/ddwejrtgh/image/upload/v1525672533/Screenshot_from_2018-05-06_22-54-48_gqbzfh.png' />
-								<div className={`project-cover ${this.state.hidden==='homeco' ? '' : 'hidden'}`}>HOMECO</div>
-							</a>
-
-						</div>
-					</div>
-					<div className='single-project order-1'>
-						<div className='project-description'>
-							<h2><a href='https://hyouuu.github.io/PendoWeb/#/' target='_blank'>Pendo</a></h2>
-							<p>Web application for <a href='https://itunes.apple.com/us/app/pendo-note/id805451002?mt=8' target='_blank'>Pendo Note iOS app</a>, crispy notebook for any ideas</p>
-						</div>
-						<div className='project-screenshoot'  onMouseOver={()=>this.revealCover('pendo')} onMouseOut={()=>this.hideCover()}>
-							<a href='https://hyouuu.github.io/PendoWeb/#/' target='_blank'>
-								<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1525672680/Screenshot_from_2018-05-06_22-57-33_sntjd8.png' />
-								<div className={`project-cover ${this.state.hidden==='pendo' ? '' : 'hidden'}`}>PENDO</div>
-							</a>
-
+						<div className='single-project'>
+							<div className='project-screenshoot' onMouseOver={()=>this.revealCover('petta')} onMouseOut={()=>this.hideCover()}>
+								<a href='https://luuufan.github.io/petta/' target='_blank'>
+									<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889364/1795238_10202694170131108_475398263_o_lgt47u.jpg' />
+									<div className='project-cover white'>
+										<h2>Petta</h2>
+									</div>
+									<div className={this.state.hidden==='petta' ? "link" : 'hidden'}>
+										<i className="fas fa-link"></i>
+										<p>A Data Visualization project build with JavaScript, D3.JS and Webpack.</p>
+									</div>
+								</a>
+							</div>
 						</div>
 					</div>
-					<div className='single-project order-2'>
-						<div className='project-description'>
-							<h2><a href='https://luuufan.github.io/petta/' target='_blank'>Petta</a></h2>
-							<p>A Data Visualization project build with JavaScript, D3.JS and Webpack.	 </p>
+					<div className='project-col'>
+						<div className='single-project'>
+							<div className='project-screenshoot'  onMouseOver={()=>this.revealCover('pendo')} onMouseOut={()=>this.hideCover()}>
+								<a href='https://hyouuu.github.io/PendoWeb/#/' target='_blank'>
+									<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1525917761/%E8%8D%94%E6%9E%9D%E5%B2%9B-0_rzvy6v.png' />
+									<div className='project-cover white'>
+										<h2>Pendo</h2>
+									</div>
+									<div className={this.state.hidden==='pendo' ? "link" : 'hidden'}>
+										<i className="fas fa-link"></i>
+										<p>Web application for Pendo Note iOS app, crispy notebook for any ideas</p>
+									</div>
+								</a>
+							</div>
 						</div>
-						<div className='project-screenshoot' onMouseOver={()=>this.revealCover('petta')} onMouseOut={()=>this.hideCover()}>
-							<a href='https://luuufan.github.io/petta/' target='_blank'>
-								<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1525672702/Screenshot_from_2018-05-06_22-58-09_s8hot0.png' />
-								<div className={`project-cover ${this.state.hidden==='petta' ? '' : 'hidden'}`}>PETTA</div>
-							</a>
+						<div className='single-project'>
+							<div className='project-screenshoot'  onMouseOver={()=>this.revealCover('homeco')} onMouseOut={()=>this.hideCover()}>
+								<a href='https://homeco.herokuapp.com/#/' target='_blank'>
+									<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1520956849/IMG_0762_gqpfuc.jpg' />
+									<div className='project-cover black'>
+										<h2>Homeco</h2>
+									</div>
+									<div className={this.state.hidden==='homeco' ? "link" : 'hidden'}>
+										<i className="fas fa-link"></i>
+										<p>An All-in-one Home Service and Schedule management Project structured by MERN Stack</p>
+									</div>
+								</a>
 
+							</div>
 						</div>
+						
 					</div>
 				</div>
 			</div>

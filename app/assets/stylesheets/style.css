@@ -216,54 +216,72 @@ h1 {
 
 .project-list {
   width: 60%;
-  margin: auto; }
+  margin: auto;
+  display: flex;
+  justify-content: space-between; }
 
-.single-project {
-  display: flex; }
-
-.project-description, .project-screenshoot {
-  width: 50%; }
-
-.project-description {
+.project-col {
+  width: 48%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center; }
-  .project-description h2 {
-    font-weight: 800;
-    font-size: 24px;
-    margin-bottom: 30px; }
-  .project-description p {
-    margin: 0 30px; }
-  .project-description a:hover {
-    text-decoration: underline;
-    transition: all 1s; }
+  justify-content: space-between; }
+
+.single-project {
+  width: 100%;
+  height: 48%; }
 
 .project-screenshoot {
+  border-radius: 5px;
   position: relative;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   overflow: hidden; }
   .project-screenshoot img {
     height: 100%;
     object-fit: cover; }
 
 .project-cover {
-  width: 100%;
   height: 100%;
+  width: 100%;
   position: absolute;
-  background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5));
   top: 0;
   left: 0;
-  padding-top: 176px;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px #000000;
-  transition: all 1s; }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0.1px 0.1px 0.1px #000000; }
+  .project-cover h2 {
+    font-weight: bold;
+    font-size: 36px;
+    opacity: 1; }
 
-.order-2 {
-  flex-direction: row-reverse; }
+.white {
+  background-color: white;
+  opacity: 0.5; }
+  .white h2 {
+    color: black; }
+
+.black {
+  background-color: black;
+  opacity: 0.5; }
+  .black h2 {
+    color: white; }
+
+.link {
+  color: white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+  .link i {
+    font-size: 48px; }
 
 #contact {
   width: 60%;
