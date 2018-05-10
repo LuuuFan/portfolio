@@ -2,6 +2,7 @@
 @import url("https://use.fontawesome.com/releases/v5.0.9/css/all.css");
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
 @import url("https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css");
+@import url("https://www.w3schools.com/w3css/4/w3.css");
 html, body, header, nav, h1, a,
 ul, li, strong, main, button, i,
 section, img, div, h2, p, form,
@@ -103,13 +104,13 @@ nav {
     text-shadow: 0.1px 0.1px 0.1px #000000; }
   nav li:hover {
     border-bottom: 3px solid white;
-    transition: all 0.5s; }
+    transition: all 1s; }
 
 .selected {
   border-bottom: 3px solid white;
   color: white;
   font-weight: 900;
-  transition: all 0.5s; }
+  transition: all 1s; }
 
 .avatar {
   cursor: pointer;
@@ -125,20 +126,12 @@ nav {
   .avatar img {
     height: 100%;
     object-fit: cover;
-    transition: height 1s width 1s; }
+    transition: opacity 1s; }
 
 h1 {
   font-size: 36px;
   font-weight: 999;
   margin-bottom: 30px; }
-
-#about {
-  padding-top: 250px; }
-
-.about-content {
-  width: 60%;
-  text-align: center;
-  margin: auto; }
 
 .skill-title {
   text-align: center;
@@ -175,7 +168,7 @@ h1 {
     font-size: 24px; }
   .skills i:hover {
     opacity: 0.5;
-    transition: all 0.5s; }
+    transition: all 1s; }
 
 .footer {
   margin-top: 200px;
@@ -193,7 +186,7 @@ h1 {
     .footer div i {
       font-size: 48px; }
     .footer div i:hover {
-      transition: all 0.5s; }
+      transition: all 1s; }
     .footer div .fa-linkedin:hover {
       color: #0073b1; }
     .footer div .fa-weibo:hover {
@@ -249,7 +242,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-shadow: 0.1px 0.1px 0.1px #000000; }
+  text-shadow: 0.1px 0.1px 0.1px #000000;
+  transition: opacity 1s; }
   .project-cover h2 {
     font-weight: bold;
     font-size: 36px;
@@ -279,7 +273,8 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  transition: opacity 2s; }
   .link i {
     font-size: 48px; }
 
@@ -314,7 +309,7 @@ h1 {
           width: 100%;
           font-size: 12px;
           color: red;
-          animation: fadein 2s; }
+          transition: opacity 1s; }
       #contact form div .contact-message {
         display: flex;
         flex-direction: column;
@@ -342,17 +337,11 @@ h1 {
       background-color: gray;
       border: 1px solid gray; }
 
-@keyframe fadein {
-  from {
-    opacity: 0; }
-
-  to {
-    opacity: 1; } }
 .message-notification, .error-send-email {
   border-radius: 5px;
   padding: 5px 10px;
   margin-bottom: 15px;
-  transition: all 0.5s; }
+  transition: opacity 0.5s; }
 
 .message-notification {
   background-color: #d0f2db; }
@@ -362,7 +351,17 @@ h1 {
   .error-send-email a:hover {
     text-decoration: underline; }
 
+#about {
+  padding-top: 250px; }
+
+.about-content {
+  width: 100%;
+  text-align: center;
+  margin: auto; }
+
 .about-content-main {
+  width: 60%;
+  margin: auto;
   line-height: 1.5;
   font-size: 18px;
   text-align: left; }
@@ -376,15 +375,23 @@ h1 {
   .about-content-main a:hover {
     text-decoration: underline; }
 
-.about-content-second h2 {
-  font-size: 24px;
-  font-weight: 800;
-  margin: 50px auto; }
-.about-content-second div {
-  width: 100%;
-  height: 250px;
-  display: flex; }
-  .about-content-second div .hobby-container {
-    flex: 1; }
+.about-content-second {
+  width: 100%; }
+  .about-content-second h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 50px auto; }
+  .about-content-second .about-content-second-list {
+    width: 100%;
+    height: 250px;
+    display: flex; }
+    .about-content-second .about-content-second-list .hobby-container {
+      flex: 1;
+      height: 300px;
+      overflow: hidden; }
+      .about-content-second .about-content-second-list .hobby-container img {
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 2s; }
 
 /*# sourceMappingURL=style.css.map */

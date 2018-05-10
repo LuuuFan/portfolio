@@ -1,11 +1,11 @@
 import React from 'react';
 
-class Outdoor extends React.Component{
+
+class Chef extends React.Component {
 	constructor(){
 		super();
 		this.state = {
-			img: [],
-			url: ''
+
 		};
 	}
 
@@ -20,10 +20,10 @@ class Outdoor extends React.Component{
 	render(){
 		return(
 			<div className='hobby-container'>
-				<img src='' />
+				<img src="" />
 			</div>
 		);
 	}
 }
 
-export default Outdoor;
+export default Chef;

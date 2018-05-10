@@ -1,6 +1,7 @@
 import React from 'react';
 import Pet from './pet';
 import Outdoor from './outdoor';
+import Chef from './chef';
 
 class About extends React.Component{
 
@@ -26,9 +27,10 @@ class About extends React.Component{
 
 					<div className='about-content-second'>
 						<h2>I'm also a ...</h2>
-						<div>
-							<Outdoor/>
-							<Pet/>
+						<div className='about-content-second-list'>
+							<Outdoor />
+							<Pet />
+							<Chef />
 						</div>
 					</div>
 				</div>

@@ -29,13 +29,13 @@ class Pet extends React.Component{
 				this.setState({idx: 0});
 			}
 
-		}, 2000);
+		}, 10000);
 	}
 
 	render(){
 		return(
 			<div className='hobby-container'>
-				<img src={this.state.img[this.state.url]} />
+				<img className='w3-animate-fading' src={this.state.img[this.state.idx]} />
 			</div>
 		);
 	}
