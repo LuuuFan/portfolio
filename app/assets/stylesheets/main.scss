@@ -192,6 +192,15 @@ h1{
 	height: 48%;
 }
 
+.single-project:hover{
+    box-shadow: 0 5px 5px 0 #adb5bd;
+}
+
+.single-project:hover .project-cover{
+	opacity: 0;
+	transition: opacity 1s;
+}
+
 .project-screenshoot{
 	border-radius: 5px;
 	position: relative;
@@ -246,6 +255,7 @@ h1{
 	width: 100%;
 	top: 0;
 	left: 0;
+	color: white;
 	background-color: black;
 	opacity: 0.8;
 	display: flex;
@@ -253,8 +263,20 @@ h1{
 	justify-content: space-around;
 	align-items: center;
 	transition: opacity 2s;
-	i{
-		font-size: 48px;
+	p{
+		opacity: 1;
+	}
+	div{
+		z-index: 10;
+		opacity: 0.5;
+		i{
+			color: white;
+			font-size: 48px;
+		}
+	}
+	div:hover{
+		opacity: 1;
+		transition: opacity 1s;
 	}
 }
 

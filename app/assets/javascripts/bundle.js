@@ -26982,19 +26982,19 @@ var _about = __webpack_require__(121);
 
 var _about2 = _interopRequireDefault(_about);
 
-var _skill = __webpack_require__(124);
+var _skill = __webpack_require__(125);
 
 var _skill2 = _interopRequireDefault(_skill);
 
-var _project = __webpack_require__(125);
+var _project = __webpack_require__(126);
 
 var _project2 = _interopRequireDefault(_project);
 
-var _contact_container = __webpack_require__(126);
+var _contact_container = __webpack_require__(127);
 
 var _contact_container2 = _interopRequireDefault(_contact_container);
 
-var _footer = __webpack_require__(129);
+var _footer = __webpack_require__(130);
 
 var _footer2 = _interopRequireDefault(_footer);
 
@@ -27216,7 +27216,7 @@ var _outdoor = __webpack_require__(123);
 
 var _outdoor2 = _interopRequireDefault(_outdoor);
 
-var _chef = __webpack_require__(130);
+var _chef = __webpack_require__(124);
 
 var _chef2 = _interopRequireDefault(_chef);
 
@@ -27517,6 +27517,65 @@ exports.default = Outdoor;
 
 /***/ }),
 /* 124 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Chef = function (_React$Component) {
+	_inherits(Chef, _React$Component);
+
+	function Chef() {
+		_classCallCheck(this, Chef);
+
+		var _this = _possibleConstructorReturn(this, (Chef.__proto__ || Object.getPrototypeOf(Chef)).call(this));
+
+		_this.state = {};
+		return _this;
+	}
+
+	_createClass(Chef, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {}
+	}, {
+		key: 'swapPic',
+		value: function swapPic() {}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: 'hobby-container' },
+				_react2.default.createElement('img', { src: '' })
+			);
+		}
+	}]);
+
+	return Chef;
+}(_react2.default.Component);
+
+exports.default = Chef;
+
+/***/ }),
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27864,7 +27923,7 @@ var Skill = function (_React$Component) {
 exports.default = Skill;
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27957,7 +28016,11 @@ var Project = function (_React$Component) {
 									_react2.default.createElement(
 										'div',
 										{ className: this.state.hidden === 'celp' ? "link" : 'hidden' },
-										_react2.default.createElement('i', { className: 'fas fa-link' }),
+										_react2.default.createElement(
+											'div',
+											null,
+											_react2.default.createElement('i', { className: 'fas fa-link' })
+										),
 										_react2.default.createElement(
 											'p',
 											null,
@@ -27993,7 +28056,11 @@ var Project = function (_React$Component) {
 									_react2.default.createElement(
 										'div',
 										{ className: this.state.hidden === 'petta' ? "link" : 'hidden' },
-										_react2.default.createElement('i', { className: 'fas fa-link' }),
+										_react2.default.createElement(
+											'div',
+											null,
+											_react2.default.createElement('i', { className: 'fas fa-link' })
+										),
 										_react2.default.createElement(
 											'p',
 											null,
@@ -28033,7 +28100,11 @@ var Project = function (_React$Component) {
 									_react2.default.createElement(
 										'div',
 										{ className: this.state.hidden === 'pendo' ? "link" : 'hidden' },
-										_react2.default.createElement('i', { className: 'fas fa-link' }),
+										_react2.default.createElement(
+											'div',
+											null,
+											_react2.default.createElement('i', { className: 'fas fa-link' })
+										),
 										_react2.default.createElement(
 											'p',
 											null,
@@ -28069,7 +28140,11 @@ var Project = function (_React$Component) {
 									_react2.default.createElement(
 										'div',
 										{ className: this.state.hidden === 'homeco' ? "link" : 'hidden' },
-										_react2.default.createElement('i', { className: 'fas fa-link' }),
+										_react2.default.createElement(
+											'div',
+											null,
+											_react2.default.createElement('i', { className: 'fas fa-link' })
+										),
 										_react2.default.createElement(
 											'p',
 											null,
@@ -28091,7 +28166,7 @@ var Project = function (_React$Component) {
 exports.default = Project;
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28111,7 +28186,7 @@ var _error = __webpack_require__(33);
 
 var _message = __webpack_require__(34);
 
-var _contact = __webpack_require__(127);
+var _contact = __webpack_require__(128);
 
 var _contact2 = _interopRequireDefault(_contact);
 
@@ -28147,7 +28222,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_contact2.default);
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28163,7 +28238,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _contact = __webpack_require__(128);
+var _contact = __webpack_require__(129);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28376,7 +28451,7 @@ var Contact = function (_React$Component) {
 exports.default = Contact;
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28394,7 +28469,7 @@ var sendContact = exports.sendContact = function sendContact(message) {
 };
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28475,65 +28550,6 @@ var Footer = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Footer;
-
-/***/ }),
-/* 130 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Chef = function (_React$Component) {
-	_inherits(Chef, _React$Component);
-
-	function Chef() {
-		_classCallCheck(this, Chef);
-
-		var _this = _possibleConstructorReturn(this, (Chef.__proto__ || Object.getPrototypeOf(Chef)).call(this));
-
-		_this.state = {};
-		return _this;
-	}
-
-	_createClass(Chef, [{
-		key: 'componentDidMount',
-		value: function componentDidMount() {}
-	}, {
-		key: 'swapPic',
-		value: function swapPic() {}
-	}, {
-		key: 'render',
-		value: function render() {
-			return _react2.default.createElement(
-				'div',
-				{ className: 'hobby-container' },
-				_react2.default.createElement('img', { src: '' })
-			);
-		}
-	}]);
-
-	return Chef;
-}(_react2.default.Component);
-
-exports.default = Chef;
 
 /***/ })
 /******/ ]);

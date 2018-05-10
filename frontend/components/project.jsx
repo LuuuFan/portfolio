@@ -30,7 +30,7 @@ class Project extends React.Component{
 										<h2>Celp</h2>
 									</div>
 									<div className={this.state.hidden==='celp' ? "link" : 'hidden'}>
-										<i className="fas fa-link"></i>
+										<div><i className="fas fa-link"></i></div>
 										<p>A Full Stack Web Application inspired by Yelp, developed in Ruby on Rails, React, etc.	 </p>
 									</div>
 								</a>
@@ -44,7 +44,7 @@ class Project extends React.Component{
 										<h2>Petta</h2>
 									</div>
 									<div className={this.state.hidden==='petta' ? "link" : 'hidden'}>
-										<i className="fas fa-link"></i>
+										<div><i className="fas fa-link"></i></div>
 										<p>A Data Visualization project build with JavaScript, D3.JS and Webpack.</p>
 									</div>
 								</a>
@@ -60,7 +60,7 @@ class Project extends React.Component{
 										<h2>Pendo</h2>
 									</div>
 									<div className={this.state.hidden==='pendo' ? "link" : 'hidden'}>
-										<i className="fas fa-link"></i>
+										<div><i className="fas fa-link"></i></div>
 										<p>Web application for Pendo Note iOS app, crispy notebook for any ideas</p>
 									</div>
 								</a>
@@ -74,7 +74,7 @@ class Project extends React.Component{
 										<h2>Homeco</h2>
 									</div>
 									<div className={this.state.hidden==='homeco' ? "link" : 'hidden'}>
-										<i className="fas fa-link"></i>
+										<div><i className="fas fa-link"></i></div>
 										<p>An All-in-one Home Service and Schedule management Project structured by MERN Stack</p>
 									</div>
 								</a>
