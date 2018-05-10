@@ -28395,7 +28395,10 @@ var Footer = function (_React$Component) {
 	function Footer() {
 		_classCallCheck(this, Footer);
 
-		return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this));
+		var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this));
+
+		_this.year = new Date().getFullYear();
+		return _this;
 	}
 
 	_createClass(Footer, [{
@@ -28436,7 +28439,9 @@ var Footer = function (_React$Component) {
 				_react2.default.createElement(
 					'p',
 					null,
-					'Copyright \xA9 Lu Fan'
+					'Copyright \xA9 ',
+					this.year,
+					' Lu Fan'
 				)
 			);
 		}

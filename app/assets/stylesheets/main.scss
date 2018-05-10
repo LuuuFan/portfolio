@@ -14,8 +14,8 @@ nav {
 	height: 75px;
 	top: 0;
 	width: 100%;
-	background: linear-gradient(#bdc3c7, #bdc3c7);
 	display: flex;
+	background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 	align-items: center;
 	justify-content: space-between;
 	ul{
@@ -129,9 +129,9 @@ h1{
 .footer{
 	margin-top: 200px;
 	padding-top: 30px;
-	background: linear-gradient(#bdc3c7, #bdc3c7);
+	background-image: linear-gradient(120deg, #8ec5fc 0%, #e0c3fc 100%);
 	width: 100%;
-	height: 150px;
+	height: 200px;
 	text-align: center;
 	div{
 		width: 50%;

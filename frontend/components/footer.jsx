@@ -3,7 +3,9 @@ import React from 'react';
 class Footer extends React.Component {
 	constructor(){
 		super();
+		this.year = new Date().getFullYear();
 	}
+
 
 	render(){
 		return(
@@ -25,7 +27,7 @@ class Footer extends React.Component {
 						<i className="fab fa-weibo"></i>
 					</a>
 				</div>
-				<p>Copyright © Lu Fan</p>
+				<p>Copyright © {this.year} Lu Fan</p>
 			</div>
 		);
 	}
