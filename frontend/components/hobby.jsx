@@ -25,10 +25,15 @@ class Hobby extends React.Component{
 	}
 
 	render(){
-		const {imgs} = this.props;
+		const {imgs, content} = this.props;
 		return(
 			<div className='hobby-container'>
-				<img className='w3-animate-fading' src={imgs[this.state.idx]} />
+				<img className='' src={imgs[this.state.idx]} />
+				<div className='hobby-content'>
+					<div>
+						{content}
+					</div>
+				</div>
 			</div>
 		);
 	}

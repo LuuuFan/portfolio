@@ -26982,19 +26982,19 @@ var _about = __webpack_require__(121);
 
 var _about2 = _interopRequireDefault(_about);
 
-var _skill = __webpack_require__(125);
+var _skill = __webpack_require__(123);
 
 var _skill2 = _interopRequireDefault(_skill);
 
-var _project = __webpack_require__(126);
+var _project = __webpack_require__(124);
 
 var _project2 = _interopRequireDefault(_project);
 
-var _contact_container = __webpack_require__(127);
+var _contact_container = __webpack_require__(125);
 
 var _contact_container2 = _interopRequireDefault(_contact_container);
 
-var _footer = __webpack_require__(130);
+var _footer = __webpack_require__(128);
 
 var _footer2 = _interopRequireDefault(_footer);
 
@@ -27208,7 +27208,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _hobby = __webpack_require__(131);
+var _hobby = __webpack_require__(122);
 
 var _hobby2 = _interopRequireDefault(_hobby);
 
@@ -27353,9 +27353,9 @@ var About = function (_React$Component) {
 						_react2.default.createElement(
 							'div',
 							{ className: 'about-content-second-list' },
-							_react2.default.createElement(_hobby2.default, { imgs: pet }),
-							_react2.default.createElement(_hobby2.default, { imgs: outdoor }),
-							_react2.default.createElement(_hobby2.default, { imgs: chef })
+							_react2.default.createElement(_hobby2.default, { imgs: pet.imgs, content: pet.content }),
+							_react2.default.createElement(_hobby2.default, { imgs: outdoor.imgs, content: outdoor.content }),
+							_react2.default.createElement(_hobby2.default, { imgs: chef.imgs, content: chef.content })
 						)
 					)
 				)
@@ -27366,20 +27366,112 @@ var About = function (_React$Component) {
 	return About;
 }(_react2.default.Component);
 
-var pet = ['https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889411/1559388_10202453124505118_1778348994_o_uw4ahs.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889292/IMG_3261_clrsva.jpg', 'http://res.cloudinary.com/ddwejrtgh/image/upload/v1525889379/1149704_10202694169251086_786668984_o_kwbw31.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889364/1795238_10202694170131108_475398263_o_lgt47u.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889438/1486068_10202453118584970_1166411670_o_cbzfzg.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889291/IMG_7576_zlfqhn.jpg'];
+var pet = {
+	imgs: ['https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889411/1559388_10202453124505118_1778348994_o_uw4ahs.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889292/IMG_3261_clrsva.jpg', 'http://res.cloudinary.com/ddwejrtgh/image/upload/v1525889379/1149704_10202694169251086_786668984_o_kwbw31.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889364/1795238_10202694170131108_475398263_o_lgt47u.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889438/1486068_10202453118584970_1166411670_o_cbzfzg.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889291/IMG_7576_zlfqhn.jpg'],
+	content: 'Pet Lover'
+};
 
-var outdoor = [];
-var chef = [];
+var outdoor = {
+	imgs: ['https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889295/IMG_8643_akpuey.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889294/IMG_7912_w7rfuy.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889293/IMG_7732_zy54p0.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889293/IMG_9390_mfxkpx.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889291/IMG_7104_yaweaa.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889292/FullSizeRender_dwbzlt.jpg'],
+	content: 'Outdoor Enthusiast'
+};
+
+var chef = {
+	imgs: ['https://res.cloudinary.com/ddwejrtgh/image/upload/v1525671889/1932594_10202694158330813_956381266_o_ktct9w.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525671548/10257499_10203058700124130_4604953966735714631_o_yf4ulc.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525671534/1781138_10203058700044128_2477849618289538833_o_xtk2zl.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525671515/1559264_10202644420367395_1712400262_o_xt2tls.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525671415/1522874_10202453141665547_272813371_o_ytcz92.jpg', 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525671403/1501349_10202453168466217_804954821_o_qldcae.jpg'],
+	content: 'Chef'
+};
 
 exports.default = About;
 
-// <img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1525644432/249358_4588511106521_218840310_n_hlkybj.jpg' />
+/***/ }),
+/* 122 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Hobby = function (_React$Component) {
+	_inherits(Hobby, _React$Component);
+
+	function Hobby() {
+		_classCallCheck(this, Hobby);
+
+		var _this = _possibleConstructorReturn(this, (Hobby.__proto__ || Object.getPrototypeOf(Hobby)).call(this));
+
+		_this.state = {
+			idx: 0
+		};
+		return _this;
+	}
+
+	_createClass(Hobby, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			this.swapPic();
+		}
+	}, {
+		key: 'swapPic',
+		value: function swapPic() {
+			var _this2 = this;
+
+			var length = this.props.imgs.length;
+			setInterval(function () {
+				if (_this2.state.idx < length - 1) {
+					_this2.setState({ idx: _this2.state.idx + 1 });
+				} else {
+					_this2.setState({ idx: 0 });
+				}
+			}, 10000);
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			var _props = this.props,
+			    imgs = _props.imgs,
+			    content = _props.content;
+
+			return _react2.default.createElement(
+				'div',
+				{ className: 'hobby-container' },
+				_react2.default.createElement('img', { className: '', src: imgs[this.state.idx] }),
+				_react2.default.createElement(
+					'div',
+					{ className: 'hobby-content' },
+					_react2.default.createElement(
+						'div',
+						null,
+						content
+					)
+				)
+			);
+		}
+	}]);
+
+	return Hobby;
+}(_react2.default.Component);
+
+exports.default = Hobby;
 
 /***/ }),
-/* 122 */,
-/* 123 */,
-/* 124 */,
-/* 125 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27727,7 +27819,7 @@ var Skill = function (_React$Component) {
 exports.default = Skill;
 
 /***/ }),
-/* 126 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27970,7 +28062,7 @@ var Project = function (_React$Component) {
 exports.default = Project;
 
 /***/ }),
-/* 127 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27990,7 +28082,7 @@ var _error = __webpack_require__(33);
 
 var _message = __webpack_require__(34);
 
-var _contact = __webpack_require__(128);
+var _contact = __webpack_require__(126);
 
 var _contact2 = _interopRequireDefault(_contact);
 
@@ -28026,7 +28118,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_contact2.default);
 
 /***/ }),
-/* 128 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28042,7 +28134,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _contact = __webpack_require__(129);
+var _contact = __webpack_require__(127);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28255,7 +28347,7 @@ var Contact = function (_React$Component) {
 exports.default = Contact;
 
 /***/ }),
-/* 129 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28273,7 +28365,7 @@ var sendContact = exports.sendContact = function sendContact(message) {
 };
 
 /***/ }),
-/* 130 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28354,82 +28446,6 @@ var Footer = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Footer;
-
-/***/ }),
-/* 131 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Hobby = function (_React$Component) {
-	_inherits(Hobby, _React$Component);
-
-	function Hobby() {
-		_classCallCheck(this, Hobby);
-
-		var _this = _possibleConstructorReturn(this, (Hobby.__proto__ || Object.getPrototypeOf(Hobby)).call(this));
-
-		_this.state = {
-			idx: 0
-		};
-		return _this;
-	}
-
-	_createClass(Hobby, [{
-		key: 'componentDidMount',
-		value: function componentDidMount() {
-			this.swapPic();
-		}
-	}, {
-		key: 'swapPic',
-		value: function swapPic() {
-			var _this2 = this;
-
-			var length = this.props.imgs.length;
-			setInterval(function () {
-				if (_this2.state.idx < length - 1) {
-					_this2.setState({ idx: _this2.state.idx + 1 });
-				} else {
-					_this2.setState({ idx: 0 });
-				}
-			}, 10000);
-		}
-	}, {
-		key: 'render',
-		value: function render() {
-			var imgs = this.props.imgs;
-
-			return _react2.default.createElement(
-				'div',
-				{ className: 'hobby-container' },
-				_react2.default.createElement('img', { className: 'w3-animate-fading', src: imgs[this.state.idx] })
-			);
-		}
-	}]);
-
-	return Hobby;
-}(_react2.default.Component);
-
-exports.default = Hobby;
 
 /***/ })
 /******/ ]);
