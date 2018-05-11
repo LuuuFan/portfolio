@@ -1,3 +1,3 @@
 # portfolio
 
-[Lu's Portfolio Site](lufan.me)
+[Lu's Portfolio Site](http://lufan.me)
