@@ -31,6 +31,11 @@ class Skill extends React.Component{
 							<div className={`icon-wordmark  ${this.state.mouseOver==='rails' ? "" : "hidden"}`}>Ruby on Rails</div>
 						</a>
 					</i>
+					<i className="devicon-python-plain colored" onMouseOver={()=>this.revealWordmark('python')} onMouseOut={()=>this.hiddenWordmark()}>
+						<a href='http://www.python.org/' target='_blank'>
+							<div className={`icon-wordmark  ${this.state.mouseOver==='python' ? "" : "hidden"}`}>Python</div>
+						</a>
+					</i>
 					<i className="devicon-react-original colored" onMouseOver={()=>this.revealWordmark('react')} onMouseOut={()=>this.hiddenWordmark()}>
 						<a href='https://reactjs.org/' target='_blank'>
 							<div className={`icon-wordmark  ${this.state.mouseOver==='react' ? "" : "hidden"}`}>React</div>

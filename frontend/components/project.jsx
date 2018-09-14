@@ -23,6 +23,20 @@ class Project extends React.Component{
 				<div className='project-list'>
 					<div className='project-col'>
 						<div className='single-project'>
+							<div className='project-screenshoot'  onMouseOver={()=>this.revealCover('edwrd')} onMouseOut={()=>this.hideCover()}>
+								<a href='http://edwrd.co/' target='_blank'>
+									<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1536897624/main_background_3_w1o3sp.jpg' />
+									<div className='project-cover black'>
+										<h2>Edwrd</h2>
+									</div>
+									<div className={this.state.hidden==='edwrd' ? "link" : 'hidden'}>
+										<div><i className="fas fa-link"></i></div>
+										<p></p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div className='single-project'>
 							<div className='project-screenshoot'  onMouseOver={()=>this.revealCover('celp')} onMouseOut={()=>this.hideCover()}>
 								<a href='https://celp.herokuapp.com/#/' target='_blank'>
 									<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1525671485/1500759_10202453164706123_223987173_o_ac1x8t.jpg' />
@@ -52,6 +66,20 @@ class Project extends React.Component{
 						</div>
 					</div>
 					<div className='project-col'>
+						<div className='single-project'>
+							<div className='project-screenshoot'  onMouseOver={()=>this.revealCover('snapedit')} onMouseOut={()=>this.hideCover()}>
+								<a href='http://ec2-54-187-78-4.us-west-2.compute.amazonaws.com:8999/#/' target='_blank'>
+									<img src='' />
+									<div className='project-cover black'>
+										<h2>SnapEdit</h2>
+									</div>
+									<div className={this.state.hidden==='snapedit' ? "link" : 'hidden'}>
+										<div><i className="fas fa-link"></i></div>
+										<p></p>
+									</div>
+								</a>
+							</div>
+						</div>
 						<div className='single-project'>
 							<div className='project-screenshoot'  onMouseOver={()=>this.revealCover('pendo')} onMouseOut={()=>this.hideCover()}>
 								<a href='https://hyouuu.github.io/PendoWeb/#/' target='_blank'>
