@@ -252,7 +252,8 @@ h1 {
   .project-cover h2 {
     font-weight: bold;
     font-size: 36px;
-    opacity: 1; }
+    opacity: 1;
+    text-transform: capitalize; }
 
 .white {
   background: rgba(255, 255, 255, 0.5); }

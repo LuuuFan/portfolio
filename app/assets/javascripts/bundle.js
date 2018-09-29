@@ -29272,278 +29272,48 @@ var Project = function (_React$Component) {
 				_react2.default.createElement(
 					'div',
 					{ className: 'project-list' },
-					_react2.default.createElement(
-						'div',
-						{ className: 'single-project' },
-						_react2.default.createElement(
+					Object.keys(projects).map(function (project, idx) {
+						return _react2.default.createElement(
 							'div',
-							{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
-									return _this2.revealCover('edwrd');
-								}, onMouseOut: function onMouseOut() {
-									return _this2.hideCover();
-								} },
+							{ className: 'single-project' },
 							_react2.default.createElement(
-								'a',
-								{ href: 'http://edwrd.co/', target: '_blank' },
-								_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1536897624/main_background_3_w1o3sp.jpg' }),
+								'div',
+								{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
+										return _this2.revealCover(project);
+									}, onMouseOut: function onMouseOut() {
+										return _this2.hideCover();
+									} },
 								_react2.default.createElement(
-									'div',
-									{ className: 'project-cover black' },
-									_react2.default.createElement(
-										'h2',
-										null,
-										'Edwrd'
-									)
-								),
-								_react2.default.createElement(
-									'div',
-									{ className: this.state.hidden === 'edwrd' ? "link" : 'hidden' },
+									'a',
+									{ href: projects[project].link, target: '_blank' },
+									_react2.default.createElement('img', { src: projects[project].img }),
 									_react2.default.createElement(
 										'div',
-										null,
-										_react2.default.createElement('i', { className: 'fas fa-link' })
+										{ className: 'project-cover black' },
+										_react2.default.createElement(
+											'h2',
+											null,
+											project
+										)
 									),
-									_react2.default.createElement('p', null)
-								)
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'single-project' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
-									return _this2.revealCover('celp');
-								}, onMouseOut: function onMouseOut() {
-									return _this2.hideCover();
-								} },
-							_react2.default.createElement(
-								'a',
-								{ href: 'https://celp.herokuapp.com/#/', target: '_blank' },
-								_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525671485/1500759_10202453164706123_223987173_o_ac1x8t.jpg' }),
-								_react2.default.createElement(
-									'div',
-									{ className: 'project-cover black' },
-									_react2.default.createElement(
-										'h2',
-										null,
-										'Celp'
-									)
-								),
-								_react2.default.createElement(
-									'div',
-									{ className: this.state.hidden === 'celp' ? "link" : 'hidden' },
 									_react2.default.createElement(
 										'div',
-										null,
-										_react2.default.createElement('i', { className: 'fas fa-link' })
-									),
-									_react2.default.createElement(
-										'p',
-										null,
-										'A Full Stack Web Application inspired by Yelp, developed in Ruby on Rails, React, etc.  '
+										{ className: _this2.state.hidden === project ? "link" : 'hidden' },
+										_react2.default.createElement(
+											'div',
+											null,
+											_react2.default.createElement('i', { className: 'fas fa-link' })
+										),
+										_react2.default.createElement(
+											'p',
+											null,
+											projects[project].description
+										)
 									)
 								)
 							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'single-project' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
-									return _this2.revealCover('homeco');
-								}, onMouseOut: function onMouseOut() {
-									return _this2.hideCover();
-								} },
-							_react2.default.createElement(
-								'a',
-								{ href: 'https://homeco.herokuapp.com/#/', target: '_blank' },
-								_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1520956849/IMG_0762_gqpfuc.jpg' }),
-								_react2.default.createElement(
-									'div',
-									{ className: 'project-cover black' },
-									_react2.default.createElement(
-										'h2',
-										null,
-										'Homeco'
-									)
-								),
-								_react2.default.createElement(
-									'div',
-									{ className: this.state.hidden === 'homeco' ? "link" : 'hidden' },
-									_react2.default.createElement(
-										'div',
-										null,
-										_react2.default.createElement('i', { className: 'fas fa-link' })
-									),
-									_react2.default.createElement(
-										'p',
-										null,
-										'An All-in-one Home Service and Schedule management Project structured by MERN Stack'
-									)
-								)
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'single-project' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
-									return _this2.revealCover('doodly');
-								}, onMouseOut: function onMouseOut() {
-									return _this2.hideCover();
-								} },
-							_react2.default.createElement(
-								'a',
-								{ href: 'https://luuufan.github.io/doodly/', target: '_blank' },
-								_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1538206104/doodlyname_f7dcav.png' }),
-								_react2.default.createElement(
-									'div',
-									{ className: 'project-cover white' },
-									_react2.default.createElement(
-										'h2',
-										null,
-										'Doodly'
-									)
-								),
-								_react2.default.createElement(
-									'div',
-									{ className: this.state.hidden === 'doodly' ? "link" : 'hidden' },
-									_react2.default.createElement(
-										'div',
-										null,
-										_react2.default.createElement('i', { className: 'fas fa-link' })
-									),
-									_react2.default.createElement(
-										'p',
-										null,
-										'Kids canvas'
-									)
-								)
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'single-project' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
-									return _this2.revealCover('snapedit');
-								}, onMouseOut: function onMouseOut() {
-									return _this2.hideCover();
-								} },
-							_react2.default.createElement(
-								'a',
-								{ href: 'http://ec2-54-187-78-4.us-west-2.compute.amazonaws.com:8999/#/', target: '_blank' },
-								_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1538205694/snapeditlogo1_preqqt.png' }),
-								_react2.default.createElement(
-									'div',
-									{ className: 'project-cover black' },
-									_react2.default.createElement(
-										'h2',
-										null,
-										'SnapEdit'
-									)
-								),
-								_react2.default.createElement(
-									'div',
-									{ className: this.state.hidden === 'snapedit' ? "link" : 'hidden' },
-									_react2.default.createElement(
-										'div',
-										null,
-										_react2.default.createElement('i', { className: 'fas fa-link' })
-									),
-									_react2.default.createElement('p', null)
-								)
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'single-project' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
-									return _this2.revealCover('pendo');
-								}, onMouseOut: function onMouseOut() {
-									return _this2.hideCover();
-								} },
-							_react2.default.createElement(
-								'a',
-								{ href: 'https://hyouuu.github.io/PendoWeb/#/', target: '_blank' },
-								_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525917761/%E8%8D%94%E6%9E%9D%E5%B2%9B-0_rzvy6v.png' }),
-								_react2.default.createElement(
-									'div',
-									{ className: 'project-cover white' },
-									_react2.default.createElement(
-										'h2',
-										null,
-										'Pendo'
-									)
-								),
-								_react2.default.createElement(
-									'div',
-									{ className: this.state.hidden === 'pendo' ? "link" : 'hidden' },
-									_react2.default.createElement(
-										'div',
-										null,
-										_react2.default.createElement('i', { className: 'fas fa-link' })
-									),
-									_react2.default.createElement(
-										'p',
-										null,
-										'Web application for Pendo Note iOS app, crispy notebook for any ideas'
-									)
-								)
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'single-project' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'project-screenshoot', onMouseOver: function onMouseOver() {
-									return _this2.revealCover('petta');
-								}, onMouseOut: function onMouseOut() {
-									return _this2.hideCover();
-								} },
-							_react2.default.createElement(
-								'a',
-								{ href: 'https://luuufan.github.io/petta/', target: '_blank' },
-								_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889364/1795238_10202694170131108_475398263_o_lgt47u.jpg' }),
-								_react2.default.createElement(
-									'div',
-									{ className: 'project-cover white' },
-									_react2.default.createElement(
-										'h2',
-										null,
-										'Petta'
-									)
-								),
-								_react2.default.createElement(
-									'div',
-									{ className: this.state.hidden === 'petta' ? "link" : 'hidden' },
-									_react2.default.createElement(
-										'div',
-										null,
-										_react2.default.createElement('i', { className: 'fas fa-link' })
-									),
-									_react2.default.createElement(
-										'p',
-										null,
-										'A Data Visualization project build with JavaScript, D3.JS and Webpack.'
-									)
-								)
-							)
-						)
-					)
+						);
+					})
 				)
 			);
 		}
@@ -29553,6 +29323,45 @@ var Project = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Project;
+
+
+var projects = {
+	edwrd: {
+		link: 'http://edwrd.co',
+		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1536897624/main_background_3_w1o3sp.jpg',
+		description: ''
+	},
+	snapedit: {
+		link: 'http://ec2-54-187-78-4.us-west-2.compute.amazonaws.com:8999/#/',
+		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1538205694/snapeditlogo1_preqqt.png',
+		description: ''
+	},
+	celp: {
+		link: 'https://celp.herokuapp.com/#/',
+		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525671485/1500759_10202453164706123_223987173_o_ac1x8t.jpg',
+		description: 'A Full Stack Web Application inspired by Yelp, developed in Ruby on Rails, React, etc.	 '
+	},
+	homeco: {
+		link: 'https://homeco.herokuapp.com/#/',
+		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1520956849/IMG_0762_gqpfuc.jpg',
+		description: 'An All-in-one Home Service and Schedule management Project structured by MERN Stack'
+	},
+	doodly: {
+		link: 'https://luuufan.github.io/doodly/',
+		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1538206104/doodlyname_f7dcav.png',
+		description: 'Kids canvas'
+	},
+	pendo: {
+		link: 'https://hyouuu.github.io/PendoWeb/#/',
+		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525917761/%E8%8D%94%E6%9E%9D%E5%B2%9B-0_rzvy6v.png',
+		description: 'Web application for Pendo Note iOS app, crispy notebook for any ideas'
+	},
+	petta: {
+		link: 'https://luuufan.github.io/petta/',
+		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889364/1795238_10202694170131108_475398263_o_lgt47u.jpg',
+		description: 'A Data Visualization project build with JavaScript, D3.JS and Webpack.'
+	}
+};
 
 /***/ }),
 /* 114 */
