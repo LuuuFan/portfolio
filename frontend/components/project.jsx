@@ -69,7 +69,7 @@ class Project extends React.Component{
 						<div className='single-project'>
 							<div className='project-screenshoot'  onMouseOver={()=>this.revealCover('snapedit')} onMouseOut={()=>this.hideCover()}>
 								<a href='http://ec2-54-187-78-4.us-west-2.compute.amazonaws.com:8999/#/' target='_blank'>
-									<img src='' />
+									<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1538205694/snapeditlogo1_preqqt.png' />
 									<div className='project-cover black'>
 										<h2>SnapEdit</h2>
 									</div>
