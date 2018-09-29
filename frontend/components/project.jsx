@@ -50,16 +50,31 @@ class Project extends React.Component{
 								</a>
 							</div>
 						</div>
+						
 						<div className='single-project'>
-							<div className='project-screenshoot' onMouseOver={()=>this.revealCover('petta')} onMouseOut={()=>this.hideCover()}>
-								<a href='https://luuufan.github.io/petta/' target='_blank'>
-									<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889364/1795238_10202694170131108_475398263_o_lgt47u.jpg' />
-									<div className='project-cover white'>
-										<h2>Petta</h2>
+							<div className='project-screenshoot'  onMouseOver={()=>this.revealCover('homeco')} onMouseOut={()=>this.hideCover()}>
+								<a href='https://homeco.herokuapp.com/#/' target='_blank'>
+									<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1520956849/IMG_0762_gqpfuc.jpg' />
+									<div className='project-cover black'>
+										<h2>Homeco</h2>
 									</div>
-									<div className={this.state.hidden==='petta' ? "link" : 'hidden'}>
+									<div className={this.state.hidden==='homeco' ? "link" : 'hidden'}>
 										<div><i className="fas fa-link"></i></div>
-										<p>A Data Visualization project build with JavaScript, D3.JS and Webpack.</p>
+										<p>An All-in-one Home Service and Schedule management Project structured by MERN Stack</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div className='single-project'>
+							<div className='project-screenshoot' onMouseOver={()=>this.revealCover('doodly')} onMouseOut={()=>this.hideCover()}>
+								<a href='https://luuufan.github.io/doodly/' target='_blank'>
+									<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1538206104/doodlyname_f7dcav.png' />
+									<div className='project-cover white'>
+										<h2>Doodly</h2>
+									</div>
+									<div className={this.state.hidden==='doodly' ? "link" : 'hidden'}>
+										<div><i className="fas fa-link"></i></div>
+										<p>Kids canvas</p>
 									</div>
 								</a>
 							</div>
@@ -95,18 +110,17 @@ class Project extends React.Component{
 							</div>
 						</div>
 						<div className='single-project'>
-							<div className='project-screenshoot'  onMouseOver={()=>this.revealCover('homeco')} onMouseOut={()=>this.hideCover()}>
-								<a href='https://homeco.herokuapp.com/#/' target='_blank'>
-									<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1520956849/IMG_0762_gqpfuc.jpg' />
-									<div className='project-cover black'>
-										<h2>Homeco</h2>
+							<div className='project-screenshoot' onMouseOver={()=>this.revealCover('petta')} onMouseOut={()=>this.hideCover()}>
+								<a href='https://luuufan.github.io/petta/' target='_blank'>
+									<img src='https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889364/1795238_10202694170131108_475398263_o_lgt47u.jpg' />
+									<div className='project-cover white'>
+										<h2>Petta</h2>
 									</div>
-									<div className={this.state.hidden==='homeco' ? "link" : 'hidden'}>
+									<div className={this.state.hidden==='petta' ? "link" : 'hidden'}>
 										<div><i className="fas fa-link"></i></div>
-										<p>An All-in-one Home Service and Schedule management Project structured by MERN Stack</p>
+										<p>A Data Visualization project build with JavaScript, D3.JS and Webpack.</p>
 									</div>
 								</a>
-
 							</div>
 						</div>
 						
