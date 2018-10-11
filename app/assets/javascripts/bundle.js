@@ -29326,15 +29326,20 @@ exports.default = Project;
 
 
 var projects = {
+	lumitless: {
+		link: 'http://ec2-54-187-78-4.us-west-2.compute.amazonaws.com:8999/#/',
+		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1539234248/lumitlessblue_lmpcqk.png',
+		description: ''
+	},
 	edwrd: {
 		link: 'http://edwrd.co',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1536897624/main_background_3_w1o3sp.jpg',
 		description: ''
 	},
-	snapedit: {
-		link: 'http://ec2-54-187-78-4.us-west-2.compute.amazonaws.com:8999/#/',
-		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1538205694/snapeditlogo1_preqqt.png',
-		description: ''
+	doodly: {
+		link: 'https://luuufan.github.io/doodly/',
+		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1538206104/doodlyname_f7dcav.png',
+		description: 'Kids canvas'
 	},
 	celp: {
 		link: 'https://celp.herokuapp.com/#/',
@@ -29345,11 +29350,6 @@ var projects = {
 		link: 'https://homeco.herokuapp.com/#/',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1520956849/IMG_0762_gqpfuc.jpg',
 		description: 'An All-in-one Home Service and Schedule management Project structured by MERN Stack'
-	},
-	doodly: {
-		link: 'https://luuufan.github.io/doodly/',
-		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1538206104/doodlyname_f7dcav.png',
-		description: 'Kids canvas'
 	},
 	pendo: {
 		link: 'https://hyouuu.github.io/PendoWeb/#/',
