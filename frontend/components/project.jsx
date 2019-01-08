@@ -47,7 +47,7 @@ export default Project;
 
 const projects = {
 	lumitless: {
-		link: 'https://ec2-18-144-18-33.us-west-1.compute.amazonaws.com:8999/#/',
+		link: 'http://ec2-18-144-18-33.us-west-1.compute.amazonaws.com:8999/#/',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1539234248/lumitlessblue_lmpcqk.png',
 		description: '',
 	},
@@ -86,4 +86,9 @@ const projects = {
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525889364/1795238_10202694170131108_475398263_o_lgt47u.jpg',
 		description: 'A Data Visualization project build with JavaScript, D3.JS and Webpack.',
 	},
+	'Believe Her': {
+		link: 'http://ec2-34-229-111-210.compute-1.amazonaws.com/#/',
+		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1546976013/believe_her_zrzeb5.jpg',
+		description: '',
+	}
 };
