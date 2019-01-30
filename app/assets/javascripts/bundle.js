@@ -29374,7 +29374,7 @@ var projects = {
 	joinLA: {
 		link: 'http://events.joinla.net',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1548875868/joinLA/logo_1024_transparent.png',
-		description: 'joinLA Clube events website for outdoor enthusiast'
+		description: 'joinLA Club events website for outdoor enthusiast in California'
 	}
 };
 
