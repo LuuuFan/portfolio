@@ -90,5 +90,10 @@ const projects = {
 		link: 'http://ec2-34-229-111-210.compute-1.amazonaws.com/#/',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1546976013/believe_her_zrzeb5.jpg',
 		description: '',
+	},
+	joinLA: {
+		link: 'http://events.joinla.net',
+		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1548875868/joinLA/logo_1024_transparent.png',
+		description: 'joinLA Clube events website for outdoor enthusiast',
 	}
 };
