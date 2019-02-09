@@ -77,7 +77,7 @@ const projects = {
 		description: '',
 	},
 	edwrd: {
-		link: '',
+		link: 'https://luuufan.github.io/edwrd-homepage/',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1536897624/main_background_3_w1o3sp.jpg',
 		description: '',
 	},
