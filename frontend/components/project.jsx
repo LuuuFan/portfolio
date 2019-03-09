@@ -57,7 +57,7 @@ const projects = {
 		description: 'A Full Stack Web Application inspired by Yelp, developed in Ruby on Rails, React, etc.	 '
 	},
 	doodly: {
-		link: 'https://ec2-18-144-18-33.us-west-1.compute.amazonaws.com:8888/#/',
+		link: 'http://ec2-18-144-18-33.us-west-1.compute.amazonaws.com:8888/#/',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1538206104/doodlyname_f7dcav.png',
 		description: 'Kids canvas',
 	},
