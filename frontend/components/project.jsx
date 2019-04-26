@@ -22,7 +22,7 @@ class Project extends React.Component{
 				<h1>PORTFOLIO</h1>
 				<div className='project-list'>
 					{Object.keys(projects).map((project, idx) => 
-						<div className='single-project'>
+						<div className='single-project' key={idx}>
 							<div className='project-screenshoot'  onMouseOver={()=>this.revealCover(project)} onMouseOut={()=>this.hideCover()}>
 								<a href={projects[project].link} target='_blank'>
 									<img src={projects[project].img} />

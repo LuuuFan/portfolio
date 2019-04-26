@@ -11,11 +11,12 @@ nav {
 	padding-bottom: 3px;
 	margin-bottom: 75px;
 	z-index: 5;
-	height: 75px;
+	height: 6vh;
 	top: 0;
 	width: 100%;
 	display: flex;
-	background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+	background-color: #222222;
+	// background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 	align-items: center;
 	justify-content: space-between;
 	ul{
@@ -33,6 +34,7 @@ nav {
 		height: 100%;
 	}
 	li{
+		color: white;
 		width: 100%;
 		height: 100%;
 		display: flex;
@@ -49,8 +51,8 @@ nav {
 }
 
 .selected{
-	border-bottom: 3px solid white;
-	color: white;
+	border-bottom: 3px solid  #83cd1f;
+	color: #83cd1f;
 	font-weight: 900;
 	transition: all 1s;
 }
@@ -89,7 +91,11 @@ h1{
 
 #skill, #project, #contact{
 	text-align: center;
-	padding-top: 250px;
+	padding: 15em 0 5em 0;
+}
+
+#project{
+	background-color: #f7f7f7;
 }
 
 .hidden{
@@ -129,9 +135,10 @@ h1{
 .footer{
 	margin-top: 200px;
 	padding-top: 30px;
-	background-image: linear-gradient(120deg, #8ec5fc 0%, #e0c3fc 100%);
+	// background-image: linear-gradient(120deg, #8ec5fc 0%, #e0c3fc 100%);
+	background-color: #222222;
 	width: 100%;
-	height: 200px;
+	height: 15vh;
 	text-align: center;
 	div{
 		width: 50%;
@@ -140,6 +147,7 @@ h1{
 		align-items: center;
 		justify-content: space-around;
 		i{
+			color: white;
 			font-size: 48px;
 		}
 		i:hover{
@@ -369,7 +377,18 @@ h1{
 }
 
 #about{
-	padding-top: 250px;
+	position: relative;
+	padding-top: 25vh;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+#about canvas{
+	z-index: -1;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
 }
 
 .about-content{
@@ -417,6 +436,7 @@ h1{
 			height: 400px;
 			overflow: hidden;
 			animation-duration: 1s;
+			background-color: white;
 			img{
 				height: 100%;
 				object-fit: cover;

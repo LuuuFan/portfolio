@@ -1,5 +1,6 @@
 import React from 'react';
 import Hobby from './hobby';
+import {initCanvas} from '../util/particles';
 
 class About extends React.Component{
 
@@ -10,9 +11,14 @@ class About extends React.Component{
 		}, 800);	
 	}
 
+	componentDidMount(){
+		initCanvas();
+	}
+
 	render(){
 		return(
 			<div id='about'>
+				<canvas id="canvasbg"></canvas>
 				<div className='about-content'>
 					<h1>ABOUT ME</h1>
 					<div className='about-content-main'>

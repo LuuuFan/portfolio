@@ -106,6 +106,11 @@ class Skill extends React.Component{
 							<div className={`icon-wordmark  ${this.state.mouseOver==='ubuntu' ? "" : "hidden"}`}>Ubuntu</div>
 						</a>
 					</i>
+					<i className="devicon-vuejs-plain colored"  onMouseOver={()=>this.revealWordmark('vue')} onMouseOut={()=>this.hiddenWordmark()}>
+						<a href='https://vuejs.org/' target='_blank'>
+							<div className={`icon-wordmark  ${this.state.mouseOver==='vue' ? "" : "hidden"}`}>Vue.js</div>
+						</a>
+					</i>
 				</div>
 			</div>
 		);
