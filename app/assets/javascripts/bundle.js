@@ -29337,7 +29337,7 @@ var projects = {
 		description: 'A Full Stack Web Application inspired by Yelp, developed in Ruby on Rails, React, etc.	 '
 	},
 	doodly: {
-		link: 'https://ec2-18-144-18-33.us-west-1.compute.amazonaws.com:8888/#/',
+		link: 'http://ec2-18-144-18-33.us-west-1.compute.amazonaws.com:8888/#/',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1538206104/doodlyname_f7dcav.png',
 		description: 'Kids canvas'
 	},
@@ -29375,6 +29375,11 @@ var projects = {
 		link: 'http://events.joinla.net',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1548875868/joinLA/logo_1024_transparent.png',
 		description: 'joinLA Club events website for outdoor enthusiast in California'
+	},
+	Playcan: {
+		link: 'https://luuufan.github.io/playcan/',
+		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1556313697/playcan/playcan_loao_fotter_color.png',
+		description: 'Platform for the Video Module software'
 	}
 };
 

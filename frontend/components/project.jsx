@@ -95,5 +95,10 @@ const projects = {
 		link: 'http://events.joinla.net',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1548875868/joinLA/logo_1024_transparent.png',
 		description: 'joinLA Club events website for outdoor enthusiast in California',
+	},
+	Playcan: {
+		link: 'https://luuufan.github.io/playcan/',
+		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1556313697/playcan/playcan_loao_fotter_color.png',
+		description: 'Platform for the Video Module software',
 	}
 };
