@@ -98,7 +98,7 @@ const projects = {
 	},
 	Playcan: {
 		link: 'https://luuufan.github.io/playcan/',
-		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1556313697/playcan/playcan_loao_fotter_color.png',
+		img: 'https://res.cloudinary.com/dq132990i/image/upload/v1556741188/playcan/i_logo_ff0mzd.png',
 		description: 'Platform for the Video Module software',
 	}
 };

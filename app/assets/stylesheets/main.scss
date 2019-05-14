@@ -382,13 +382,17 @@ h1{
 	background-color: rgba(255, 255, 255, 0.5);
 }
 
-#about canvas{
+#about canvas, #canvasbg{
 	z-index: -1;
 	position: absolute;
-	height: 100%;
-	width: 100%;
+	height: 100vh;
+	width: 100vw;
 	left: 0;
 	top: 0;
+}
+
+#about .about-content-main a{
+	z-index: 10;
 }
 
 .about-content{
