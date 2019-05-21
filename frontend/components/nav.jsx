@@ -23,6 +23,7 @@ class Nav extends React.Component {
 
 	scroll(e, target){
 		e.preventDefault();
+		this.setState({dropdown: false});
 		$('html, body').animate({
 			scrollTop: $(target).offset().top
 		}, 800);	
@@ -66,8 +67,9 @@ class Nav extends React.Component {
 					<i className="fas fa-bars"></i>
 				</div>
 				<div className={`dropdown ${dropdown ? "active" : ""}`}>
+					<div className='dropdownCaret'></div>
 					<ul>
-						{Object.keys(navContent).map((li, idx) => <li key={idx} onClick={()=>this.scroll(e, navContent[li])}>{li}</li>)}
+						{Object.keys(navContent).map((li, idx) => <li key={idx} onClick={e=>this.scroll(e, navContent[li])}>{li}</li>)}
 					</ul>					
 				</div>
 				{dropdown ? <div className='modal-screen' onClick={()=>this.toggleDropdown()}></div> : ""}

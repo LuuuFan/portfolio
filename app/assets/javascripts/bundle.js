@@ -28468,6 +28468,7 @@ var Nav = function (_React$Component) {
 		key: 'scroll',
 		value: function scroll(e, target) {
 			e.preventDefault();
+			this.setState({ dropdown: false });
 			$('html, body').animate({
 				scrollTop: $(target).offset().top
 			}, 800);
@@ -28574,13 +28575,14 @@ var Nav = function (_React$Component) {
 				_react2.default.createElement(
 					'div',
 					{ className: 'dropdown ' + (dropdown ? "active" : "") },
+					_react2.default.createElement('div', { className: 'dropdownCaret' }),
 					_react2.default.createElement(
 						'ul',
 						null,
 						Object.keys(navContent).map(function (li, idx) {
 							return _react2.default.createElement(
 								'li',
-								{ key: idx, onClick: function onClick() {
+								{ key: idx, onClick: function onClick(e) {
 										return _this2.scroll(e, navContent[li]);
 									} },
 								li
@@ -29890,9 +29892,10 @@ var Contact = function (_React$Component) {
 		}
 	}, {
 		key: 'sendMessage',
-		value: function sendMessage() {
+		value: function sendMessage(e) {
 			var _this3 = this;
 
+			e.preventDefault();
 			if (this.checkAll()) {
 				emailjs.send("default_service", "portfolio", this.state).then(function (res) {
 					if (res.status === 200) {
@@ -29951,22 +29954,24 @@ var Contact = function (_React$Component) {
 				) : "",
 				_react2.default.createElement(
 					'form',
-					null,
+					{ onSubmit: function onSubmit(e) {
+							return _this4.sendMessage(e);
+						} },
 					_react2.default.createElement(
 						'div',
 						null,
 						_react2.default.createElement(
 							'div',
 							null,
-							_react2.default.createElement('input', { type: 'text', placeholder: 'Please enter your name *', value: this.state.name, onChange: this.handleInput('name'), onBlur: function onBlur() {
+							_react2.default.createElement('input', { type: 'text', placeholder: 'Please enter your name *', required: true, value: this.state.name, onChange: this.handleInput('name'), onBlur: function onBlur() {
 									return _this4.checkInput('Name');
 								} }),
 							error.errorName ? _react2.default.createElement(
 								'div',
 								{ className: 'error' },
-								error.errorName ? error.errorName : ''
+								error.errorName
 							) : "",
-							_react2.default.createElement('input', { type: 'text', placeholder: 'Please enter your email *', value: this.state.email, onChange: this.handleInput('email'), onBlur: function onBlur() {
+							_react2.default.createElement('input', { type: 'email', placeholder: 'Please enter your email *', required: true, value: this.state.email, onChange: this.handleInput('email'), onBlur: function onBlur() {
 									return _this4.checkInput('Email');
 								} }),
 							error.errorEmail ? _react2.default.createElement(
@@ -29998,8 +30003,6 @@ var Contact = function (_React$Component) {
 					),
 					_react2.default.createElement('input', { type: 'submit', value: 'Send', onMouseOver: function onMouseOver() {
 							return _this4.checkAll();
-						}, onClick: function onClick() {
-							return _this4.sendMessage();
 						} })
 				)
 			);

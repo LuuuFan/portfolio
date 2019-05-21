@@ -50,25 +50,62 @@ nav {
 	}
 }
 
+.dropdownCaret{
+	position: absolute;
+	top: -6px;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid #000;
+	right: 1em;
+	-webkit-filter: drop-shadow(0 -1px 0 #000);
+  }
+
 .modal-screen{
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
+	left: 0;
+	top: 0;
 	padding: 0;
 	margin: 0;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0);
 	z-index: 5;
 }
 .mobile-nav{
 	display: none;
+	margin-left: auto;
+	margin-right: 1em;
+	cursor: pointer;
+	i{
+		color: white;
+	}
 }
 
 .dropdown{
+	position: absolute;
+	right: 0.5em;
+	top: 7vh;
 	z-index: 10;
 	transform: translateY(-250%);
 	transition: transform .5s;
+	background-color: black;
+	border-radius: 5px;
 	ul{
 		flex-direction: column;
+		width: auto;
+		li{
+			box-sizing: border-box;
+			cursor: pointer;
+			border-bottom: 1px solid white;
+			text-align: center;
+			padding: 0.3em 1em;
+		}
+		li:last-of-type{
+			border-bottom: none;
+		}
+		li:hover{
+			transition: all .8s;
+		}
 	}
 }
 
@@ -347,9 +384,11 @@ h1{
 				}
 				.error{
 					padding-left: 10px;
-					text-align: left;
+					align-items: flex-start;
+					flex: none;
 					width: 100%;
 					font-size: 12px;
+					height: 0;
 					color: red;
 					transition: opacity 1s;
 				}

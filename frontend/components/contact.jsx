@@ -69,7 +69,8 @@ class Contact extends React.Component{
 		return this.checkInput('Name') && this.checkInput('Email') && this.checkInput('Message');
 	}
 
-	sendMessage(){
+	sendMessage(e){
+		e.preventDefault();
 		if (this.checkAll()) {
 			emailjs.send("default_service","portfolio", this.state)
 				.then((res)=>{
@@ -104,14 +105,14 @@ class Contact extends React.Component{
 				{error.error ? <div className='error-send-email'>
 					Oooops~ seems there is an error, please send email to <a href='mailto:angelia.fan@gmail.com'>Angelia.fan@gmail.com</a>.
 				</div> : ""}
-				<form>
+				<form onSubmit={e=>this.sendMessage(e)}>
 					<div>
 						<div>
-							<input type='text' placeholder='Please enter your name *' value={this.state.name} onChange={this.handleInput('name')} onBlur={()=>this.checkInput('Name')}/>
+							<input type='text' placeholder='Please enter your name *' required value={this.state.name} onChange={this.handleInput('name')} onBlur={()=>this.checkInput('Name')}/>
 							{error.errorName ? 
-								<div className='error'>{error.errorName ? error.errorName : ''}</div>
+								<div className='error'>{error.errorName}</div>
 							: ""}
-							<input type='text' placeholder='Please enter your email *'  value={this.state.email} onChange={this.handleInput('email')} onBlur={()=>this.checkInput('Email')}/>
+							<input type='email' placeholder='Please enter your email *' required value={this.state.email} onChange={this.handleInput('email')} onBlur={()=>this.checkInput('Email')}/>
 							{error.errorEmail ? 
 								<div className='error'>{error.errorEmail}</div>
 							: ""}
@@ -125,7 +126,7 @@ class Contact extends React.Component{
 							<div className='error'>{error.errorMessage ? error.errorMessage : ''}</div>
 						</div>
 					</div>
-					<input type='submit' value='Send' onMouseOver={()=>this.checkAll()} onClick={()=>this.sendMessage()}/>
+					<input type='submit' value='Send' onMouseOver={()=>this.checkAll()}/>
 				</form>
 			</div>
 		);
