@@ -7,6 +7,7 @@ let plugins = [
     sourceMap: false,
   }),
 ]; // if using any plugins for both dev and production
+
 let devPlugins = []; // if using any plugins for development
 
 const prodPlugins = [
