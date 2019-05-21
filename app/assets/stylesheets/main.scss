@@ -50,6 +50,33 @@ nav {
 	}
 }
 
+.modal-screen{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	background-color: rgba(0,0,0,0.6);
+	z-index: 5;
+}
+.mobile-nav{
+	display: none;
+}
+
+.dropdown{
+	z-index: 10;
+	transform: translateY(-250%);
+	transition: transform .5s;
+	ul{
+		flex-direction: column;
+	}
+}
+
+.active{
+	transform: translateY(0);
+	transition: transform .5s;
+}
+
 .selected{
 	border-bottom: 3px solid  #83cd1f;
 	color: #83cd1f;
@@ -61,10 +88,10 @@ nav {
 	cursor: pointer;
 	z-index: 7;
 	position: fixed;
-	top: 20px;
-	left: calc(50% - 5em);
-	height: 10em;
-	width: 10em;
+	top: 0.5em;
+	left: calc(50% - 4em);
+	height: 8em;
+	width: 8em;
 	border-radius: 50%;
 	overflow: hidden;
     box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
@@ -190,13 +217,17 @@ h1{
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: flex-start;
 }
 
 .single-project {
 	width: 45%;
 	height: 250px;
 	margin-bottom: 25px;
+}
+
+.single-project:nth-child(odd){
+	margin-right: 10%;
 }
 
 .single-project:hover{

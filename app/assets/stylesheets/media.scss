@@ -1,8 +1,13 @@
 @media only screen and (max-width: 960px) {
+	nav>ul{
+		display: none;
+	}
 	.avatar{
-		left: calc(50% - 2.5em);
-		width: 5em;
-		height: 5em;
+		// left: calc(50% - 2.5em);
+		left: 0.5em;
+		width: 2.5em;
+		height: 2.5em;
+		transition: all .8s;
 	}
 	#about, #project, #contact{
 		padding-top: 15vh;
@@ -26,9 +31,13 @@
 	.skills{
 		width: 90%;
 	}
+	.single-project:nth-child(odd){
+		margin-right: auto;
+	}
 	.single-project{
+		height: 10em;
 		width: 90%;
-		margin: 1em auto;
+		margin: 0.5em auto;
 	}
 	.skills{
 		i{

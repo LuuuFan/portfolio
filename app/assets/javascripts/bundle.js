@@ -28445,7 +28445,8 @@ var Nav = function (_React$Component) {
 		var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this));
 
 		_this.state = {
-			selected: ''
+			selected: '',
+			dropdown: false
 		};
 		return _this;
 	}
@@ -28480,9 +28481,18 @@ var Nav = function (_React$Component) {
 			}, 800);
 		}
 	}, {
+		key: 'toggleDropdown',
+		value: function toggleDropdown() {
+			this.setState({ dropdown: !this.state.dropdown });
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			var _this2 = this;
+
+			var _state = this.state,
+			    selected = _state.selected,
+			    dropdown = _state.dropdown;
 
 			return _react2.default.createElement(
 				'nav',
@@ -28497,7 +28507,7 @@ var Nav = function (_React$Component) {
 							} },
 						_react2.default.createElement(
 							'li',
-							{ className: this.state.selected === 'about' ? 'selected' : '', onClick: function onClick() {
+							{ className: selected === 'about' ? 'selected' : '', onClick: function onClick() {
 									return _this2.select('about');
 								} },
 							'About'
@@ -28510,7 +28520,7 @@ var Nav = function (_React$Component) {
 							} },
 						_react2.default.createElement(
 							'li',
-							{ className: this.state.selected === 'skill' ? 'selected' : '', onClick: function onClick() {
+							{ className: selected === 'skill' ? 'selected' : '', onClick: function onClick() {
 									return _this2.select('skill');
 								} },
 							'Skills'
@@ -28527,7 +28537,7 @@ var Nav = function (_React$Component) {
 							} },
 						_react2.default.createElement(
 							'li',
-							{ className: this.state.selected === 'portfolio' ? 'selected' : '', onClick: function onClick() {
+							{ className: selected === 'portfolio' ? 'selected' : '', onClick: function onClick() {
 									return _this2.select('portfolio');
 								} },
 							'Portfolio'
@@ -28540,7 +28550,7 @@ var Nav = function (_React$Component) {
 							} },
 						_react2.default.createElement(
 							'li',
-							{ className: this.state.selected === 'contact' ? 'selected' : '', onClick: function onClick() {
+							{ className: selected === 'contact' ? 'selected' : '', onClick: function onClick() {
 									return _this2.select('contact');
 								} },
 							'Contact'
@@ -28553,7 +28563,34 @@ var Nav = function (_React$Component) {
 							return _this2.top();
 						} },
 					_react2.default.createElement('img', { src: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525637838/323463_2651367759148_317015209_o_czpd5y.jpg' })
-				)
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'mobile-nav', onClick: function onClick() {
+							return _this2.toggleDropdown();
+						} },
+					_react2.default.createElement('i', { className: 'fas fa-bars' })
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'dropdown ' + (dropdown ? "active" : "") },
+					_react2.default.createElement(
+						'ul',
+						null,
+						Object.keys(navContent).map(function (li, idx) {
+							return _react2.default.createElement(
+								'li',
+								{ key: idx, onClick: function onClick() {
+										return _this2.scroll(e, navContent[li]);
+									} },
+								li
+							);
+						})
+					)
+				),
+				dropdown ? _react2.default.createElement('div', { className: 'modal-screen', onClick: function onClick() {
+						return _this2.toggleDropdown();
+					} }) : ""
 			);
 		}
 	}]);
@@ -28562,6 +28599,14 @@ var Nav = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Nav;
+
+
+var navContent = {
+	"about": "#about",
+	"skills": "#skill",
+	"portfolio": "#project",
+	"contact": "#contact"
+};
 
 /***/ }),
 /* 110 */
