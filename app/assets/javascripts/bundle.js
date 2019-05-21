@@ -29916,27 +29916,27 @@ var Contact = function (_React$Component) {
 							_react2.default.createElement('input', { type: 'text', placeholder: 'Please enter your name *', value: this.state.name, onChange: this.handleInput('name'), onBlur: function onBlur() {
 									return _this4.checkInput('Name');
 								} }),
-							_react2.default.createElement(
+							error.errorName ? _react2.default.createElement(
 								'div',
 								{ className: 'error' },
 								error.errorName ? error.errorName : ''
-							),
+							) : "",
 							_react2.default.createElement('input', { type: 'text', placeholder: 'Please enter your email *', value: this.state.email, onChange: this.handleInput('email'), onBlur: function onBlur() {
 									return _this4.checkInput('Email');
 								} }),
-							_react2.default.createElement(
+							error.errorEmail ? _react2.default.createElement(
 								'div',
 								{ className: 'error' },
-								error.errorEmail ? error.errorEmail : ''
-							),
+								error.errorEmail
+							) : "",
 							_react2.default.createElement('input', { type: 'text', placeholder: 'Please enter your phone Number', value: this.state.phone, onChange: this.handleInput('phone'), onBlur: function onBlur() {
 									return _this4.checkInput('Phone');
 								} }),
-							_react2.default.createElement(
+							error.errorPhone ? _react2.default.createElement(
 								'div',
 								{ className: 'error' },
-								error.errorPhone ? error.errorPhone : ''
-							)
+								error.errorPhone
+							) : ""
 						),
 						_react2.default.createElement(
 							'div',

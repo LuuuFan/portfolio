@@ -108,11 +108,17 @@ class Contact extends React.Component{
 					<div>
 						<div>
 							<input type='text' placeholder='Please enter your name *' value={this.state.name} onChange={this.handleInput('name')} onBlur={()=>this.checkInput('Name')}/>
-							<div className='error'>{error.errorName ? error.errorName : ''}</div>
+							{error.errorName ? 
+								<div className='error'>{error.errorName ? error.errorName : ''}</div>
+							: ""}
 							<input type='text' placeholder='Please enter your email *'  value={this.state.email} onChange={this.handleInput('email')} onBlur={()=>this.checkInput('Email')}/>
-							<div className='error'>{error.errorEmail ? error.errorEmail : ''}</div>
+							{error.errorEmail ? 
+								<div className='error'>{error.errorEmail}</div>
+							: ""}
 							<input type='text' placeholder='Please enter your phone Number'  value={this.state.phone} onChange={this.handleInput('phone')} onBlur={()=>this.checkInput('Phone')}/>
-							<div className='error'>{error.errorPhone ? error.errorPhone : ''}</div>
+							{error.errorPhone ? 
+								<div className='error'>{error.errorPhone}</div>
+							: ""}
 						</div>
 						<div className='contact-message'>
 							<textarea placeholder='Message for me *'  value={this.state.message} onChange={this.handleInput('message')} onBlur={()=>this.checkInput('Message')}/>
