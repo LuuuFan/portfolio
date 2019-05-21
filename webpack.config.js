@@ -1,7 +1,12 @@
 const path = require('path');
 const webpack = require("webpack");
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 
-let plugins = []; // if using any plugins for both dev and production
+let plugins = [
+  new MinifyPlugin({}, {
+    sourceMap: false,
+  }),
+]; // if using any plugins for both dev and production
 let devPlugins = []; // if using any plugins for development
 
 const prodPlugins = [
