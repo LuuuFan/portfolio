@@ -97,7 +97,7 @@ const projects = {
 		description: 'joinLA Club events website for outdoor enthusiast in California',
 	},
 	Playcan: {
-		link: 'http://playcan.io',
+		link: 'http://playcan.video',
 		img: 'https://res.cloudinary.com/dq132990i/image/upload/v1556741188/playcan/i_logo_ff0mzd.png',
 		description: 'Platform for the Video Module software',
 	}
