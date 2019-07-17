@@ -46,20 +46,20 @@ class Project extends React.Component{
 export default Project;
 
 const projects = {
-	lumitless: {
-		link: 'http://ec2-18-144-18-33.us-west-1.compute.amazonaws.com:8999/#/',
-		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1539234248/lumitlessblue_lmpcqk.png',
-		description: '',
+	Playcan: {
+		link: 'http://playcan.video',
+		img: 'https://res.cloudinary.com/dq132990i/image/upload/v1556741188/playcan/i_logo_ff0mzd.png',
+		description: 'Platform for the Video Module software',
+	},
+	joinLA: {
+		link: 'http://events.joinla.net',
+		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1548875868/joinLA/logo_1024_transparent.png',
+		description: 'joinLA Club events website for outdoor enthusiast in California',
 	},
 	celp: {
 		link: 'https://celp.herokuapp.com/#/',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525671485/1500759_10202453164706123_223987173_o_ac1x8t.jpg',
 		description: 'A Full Stack Web Application inspired by Yelp, developed in Ruby on Rails, React, etc.	 '
-	},
-	doodly: {
-		link: 'http://ec2-18-144-18-33.us-west-1.compute.amazonaws.com:8888/#/',
-		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1538206104/doodlyname_f7dcav.png',
-		description: 'Kids canvas',
 	},
 	homeco: {
 		link: 'https://homeco.herokuapp.com/#/',
@@ -71,10 +71,25 @@ const projects = {
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1525917761/%E8%8D%94%E6%9E%9D%E5%B2%9B-0_rzvy6v.png',
 		description: 'Web application for Pendo Note iOS app, crispy notebook for any ideas',
 	},
+	commap: {
+		link: 'http://ec2-3-14-136-230.us-east-2.compute.amazonaws.com/#/',
+		img: 'https://res.cloudinary.com/dq132990i/image/upload/v1563404403/commap/myswcdvqklvcasrvmlvc.jpg',
+		description: "",
+	},
+	lumitless: {
+		link: 'http://ec2-18-144-18-33.us-west-1.compute.amazonaws.com:8999/#/',
+		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1539234248/lumitlessblue_lmpcqk.png',
+		description: 'A canvas based collaboration platform, integrated fabric.js, Tabulator, etc.',
+	},
+	doodly: {
+		link: 'http://ec2-18-144-18-33.us-west-1.compute.amazonaws.com:8888/#/',
+		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1538206104/doodlyname_f7dcav.png',
+		description: 'Kids canvas',
+	},
 	styleboard: {
 		link: 'http://ec2-18-144-18-33.us-west-1.compute.amazonaws.com:5555/#/',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1540960533/Screenshot_from_2018-10-30_21-35-10_tejvpl.png',
-		description: '',
+		description: 'Fasion collaction platform.',
 	},
 	edwrd: {
 		link: 'https://luuufan.github.io/edwrd-homepage/',
@@ -91,14 +106,6 @@ const projects = {
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1546976013/believe_her_zrzeb5.jpg',
 		description: '',
 	},
-	joinLA: {
-		link: 'http://events.joinla.net',
-		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1548875868/joinLA/logo_1024_transparent.png',
-		description: 'joinLA Club events website for outdoor enthusiast in California',
-	},
-	Playcan: {
-		link: 'http://playcan.video',
-		img: 'https://res.cloudinary.com/dq132990i/image/upload/v1556741188/playcan/i_logo_ff0mzd.png',
-		description: 'Platform for the Video Module software',
-	}
+
+
 };
