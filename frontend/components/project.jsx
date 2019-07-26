@@ -87,7 +87,7 @@ const projects = {
 		description: 'Kids canvas',
 	},
 	styleboard: {
-		link: 'http://styleboard.herokuapp.com',
+		link: 'http://34.94.154.10',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1540960533/Screenshot_from_2018-10-30_21-35-10_tejvpl.png',
 		description: 'Fasion collaction platform.',
 	},
