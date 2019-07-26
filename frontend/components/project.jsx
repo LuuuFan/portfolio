@@ -77,17 +77,17 @@ const projects = {
 		description: "",
 	},
 	lumitless: {
-		link: 'http://ec2-18-144-18-33.us-west-1.compute.amazonaws.com:8999/#/',
+		link: 'http://lumitless.herokuapp.com',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1539234248/lumitlessblue_lmpcqk.png',
 		description: 'A canvas based collaboration platform, integrated fabric.js, Tabulator, etc.',
 	},
 	doodly: {
-		link: 'http://ec2-18-144-18-33.us-west-1.compute.amazonaws.com:8888/#/',
+		link: 'https://doodly.herokuapp.com',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1538206104/doodlyname_f7dcav.png',
 		description: 'Kids canvas',
 	},
 	styleboard: {
-		link: 'http://ec2-18-144-18-33.us-west-1.compute.amazonaws.com:5555/#/',
+		link: 'http://styleboard.herokuapp.com',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1540960533/Screenshot_from_2018-10-30_21-35-10_tejvpl.png',
 		description: 'Fasion collaction platform.',
 	},
