@@ -74,7 +74,7 @@ const projects = {
 	commap: {
 		link: 'http://ec2-3-14-136-230.us-east-2.compute.amazonaws.com/#/',
 		img: 'https://res.cloudinary.com/dq132990i/image/upload/v1563404403/commap/myswcdvqklvcasrvmlvc.jpg',
-		description: "",
+		description: "Communication Map Tool",
 	},
 	lumitless: {
 		link: 'http://lumitless.herokuapp.com',
@@ -88,13 +88,18 @@ const projects = {
 	},
 	styleboard: {
 		link: 'http://34.94.154.10',
-		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1540960533/Screenshot_from_2018-10-30_21-35-10_tejvpl.png',
+		img: 'https://res.cloudinary.com/dzv602dox/image/upload/v1565202097/portfolio/collection-sketch_o0kqge.jpg',
 		description: 'Fasion collaction platform.',
 	},
 	edwrd: {
 		link: 'https://luuufan.github.io/edwrd-homepage/',
 		img: 'https://res.cloudinary.com/ddwejrtgh/image/upload/v1536897624/main_background_3_w1o3sp.jpg',
-		description: '',
+		description: 'One-Stop service website for celebration, anniversary',
+	},
+	N3N: {
+		link: "http://n3n.ai",
+		img: "https://res.cloudinary.com/dzv602dox/image/upload/v1565202242/portfolio/n3n_logo_x1iate.jpg",
+		description: "Company introduction website",
 	},
 	petta: {
 		link: 'https://luuufan.github.io/petta/',
